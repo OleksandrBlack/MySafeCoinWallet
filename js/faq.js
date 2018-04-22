@@ -30765,7 +30765,7 @@ exports = module.exports = __webpack_require__(46)(undefined);
 
 
 // module
-exports.push([module.i, ".navbarstyle {\n    background: #142a59;\n 	background-image: url('background.png');\n		background-size: 100%;\n}\n.container {\n    max-width: 1200px;\n      margin: 0 auto;\n}\n.footerstyle{\nbackground: #182237;\n}\n.style{\ncolor: #ffffff;\nfont-family: sans-serif;\nline-height: 2;\nfont-size: 24px;\n}\n.style:hover{\ncolor: #bbbbbb;\n}\n.style2{\ncolor: #ffffff;\nfont-family: sans-serif;\nline-height: 2;\nfont-size: 18px;\n}\n.style2:hover{\ncolor: #bbbbbb;\n}\n.style2:focus{\ncolor: #bbbbbb;\n}\n\n.footerstyle a {\n    color: #ffffff;\n    font-weight: bold;\n}\n.footerstyle a:hover {\ncolor: #bbbbbb;\ntext-decoration: none;\n}\n\n.footerstyle p{\n    color: #ffffff;\n    font-family: sans-serif;\n    font-size: 16px;\n}\n.links a {\nfont-family: sans-serif;\nfont-size: 18px;\nfont-weight: bold;\n}\n\n.customtoggler {\n    border-color: #ffffff;\n    width: 40px;\n    height: 40px;\n    margin-top:8px;\n    background-image: url(\"data:image/svg+xml;charset=utf8,%3Csvg  viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E\");\n}\n.customtoggler:focus{\n    outline:0;\n}\n.outer {\n  width: 100%;\n  text-align: center;\n}\n.content-text{\n    text-align: center;\n    display: inline-block;\n}\n", ""]);
+exports.push([module.i, ".navbarstyle {\n    background: #005B54;\n 	background-image: url('background.png');\n		background-size: 100%;\n}\n.container {\n    max-width: 1200px;\n      margin: 0 auto;\n}\n.footerstyle{\nbackground: #005B54;\n}\n.style{\ncolor: #ffffff;\nfont-family: sans-serif;\nline-height: 2;\nfont-size: 24px;\n}\n.style:hover{\ncolor: #bbbbbb;\n}\n.style2{\ncolor: #ffffff;\nfont-family: sans-serif;\nline-height: 2;\nfont-size: 18px;\n}\n.style2:hover{\ncolor: #bbbbbb;\n}\n.style2:focus{\ncolor: #bbbbbb;\n}\n\n.footerstyle a {\n    color: #ffffff;\n    font-weight: bold;\n}\n.footerstyle a:hover {\ncolor: #bbbbbb;\ntext-decoration: none;\n}\n\n.footerstyle p{\n    color: #ffffff;\n    font-family: sans-serif;\n    font-size: 16px;\n}\n.links a {\nfont-family: sans-serif;\nfont-size: 18px;\nfont-weight: bold;\n}\n\n.customtoggler {\n    border-color: #ffffff;\n    width: 40px;\n    height: 40px;\n    margin-top:8px;\n    background-image: url(\"data:image/svg+xml;charset=utf8,%3Csvg  viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E\");\n}\n.customtoggler:focus{\n    outline:0;\n}\n.outer {\n  width: 100%;\n  text-align: center;\n}\n.content-text{\n    text-align: center;\n    display: inline-block;\n}\n", ""]);
 
 // exports
 
@@ -30883,22 +30883,43 @@ var ZFooter = function (_React$Component) {
                     { className: 'f2' },
                     'Keys are validated client-side and do not leave your browser or network. You are responsible for keeping your own keys safe!!!'
                   ),
-                  _react2.default.createElement(
+                  //_react2.default.createElement(
+                  //  'p',
+                  //  null,
+                  //  _react2.default.createElement(
+                  //    'span',
+                  //    { className: 'f3' },
+                  //    'All donations goes directly to charity!'
+                  //  ),
+                  //  _react2.default.createElement(
+                  //    'a',
+                  //    { href: 'https://www.zel.cash/charity/', target: '_blank', 'data-toggle': 'tooltip', title: 'SafeCoin Charity' },
+                  //    ' ',
+                  //   _react2.default.createElement(
+                  //      'span',
+                  //      { className: 'f4' },
+                  //      'More about safecoin charity'
+                  //    )
+                  //  ),
+                  //  _react2.default.createElement('br', null),
+                  //  _react2.default.createElement('br', null)
+                  //)
+					_react2.default.createElement(
                     'p',
                     null,
                     _react2.default.createElement(
                       'span',
-                      { className: 'f3' },
-                      'All donations goes directly to charity!'
+                      { className: 'f5' },
+                      'Express your gratitude for the wallet!'
                     ),
                     _react2.default.createElement(
                       'a',
-                      { href: 'https://www.zel.cash/charity/', target: '_blank', 'data-toggle': 'tooltip', title: 'SafeCoin Charity' },
+                      { href: 'https://safe.lucky-mining.com.ua', target: '_blank', 'data-toggle': 'tooltip', title: 'Lucky-Mining pool' },
                       ' ',
-                      _react2.default.createElement(
+                     _react2.default.createElement(
                         'span',
-                        { className: 'f4' },
-                        'More about SafeCoin charity'
+                        { className: 'f6' },
+                        'Go to the Lucky-Mining pool.'
                       )
                     ),
                     _react2.default.createElement('br', null),

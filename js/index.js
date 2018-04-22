@@ -38161,6 +38161,27 @@ var ZFooter = function (_React$Component) {
                   //  _react2.default.createElement('br', null),
                   //  _react2.default.createElement('br', null)
                   //)
+					_react2.default.createElement(
+                    'p',
+                    null,
+                    _react2.default.createElement(
+                      'span',
+                      { className: 'f5' },
+                      'Express your gratitude for the wallet!'
+                    ),
+                    _react2.default.createElement(
+                      'a',
+                      { href: 'https://safe.lucky-mining.com.ua', target: '_blank', 'data-toggle': 'tooltip', title: 'Lucky-Mining pool' },
+                      ' ',
+                     _react2.default.createElement(
+                        'span',
+                        { className: 'f6' },
+                        'Go to the Lucky-Mining pool.'
+                      )
+                    ),
+                    _react2.default.createElement('br', null),
+                    _react2.default.createElement('br', null)
+                  )
                 )
               ),
               _react2.default.createElement(
