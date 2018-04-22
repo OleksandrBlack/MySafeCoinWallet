@@ -34716,7 +34716,7 @@ var ZNavbar = function (_React$Component) {
             _react2.default.createElement(
               _reactstrap.NavbarBrand,
               { className: 'style', href: '/' },
-              _react2.default.createElement('img', { src: './zelcashlogo.png', height: 50 })
+              _react2.default.createElement('img', { src: './safecoinlogo.png', height: 50 })
             ),
             _react2.default.createElement(
               _reactstrap.Collapse,
@@ -37728,7 +37728,7 @@ exports = module.exports = __webpack_require__(46)(undefined);
 
 
 // module
-exports.push([module.i, ".navbarstyle {\n    background: #142a59;\n 	background-image: url('background.png');\n		background-size: 100%;\n}\n.container {\n    max-width: 1200px;\n      margin: 0 auto;\n}\n.footerstyle{\nbackground: #182237;\n}\n.style{\ncolor: #ffffff;\nfont-family: sans-serif;\nline-height: 2;\nfont-size: 24px;\n}\n.style:hover{\ncolor: #bbbbbb;\n}\n.style2{\ncolor: #ffffff;\nfont-family: sans-serif;\nline-height: 2;\nfont-size: 18px;\n}\n.style2:hover{\ncolor: #bbbbbb;\n}\n.style2:focus{\ncolor: #bbbbbb;\n}\n\n.footerstyle a {\n    color: #ffffff;\n    font-weight: bold;\n}\n.footerstyle a:hover {\ncolor: #bbbbbb;\ntext-decoration: none;\n}\n\n.footerstyle p{\n    color: #ffffff;\n    font-family: sans-serif;\n    font-size: 16px;\n}\n.links a {\nfont-family: sans-serif;\nfont-size: 18px;\nfont-weight: bold;\n}\n\n.customtoggler {\n    border-color: #ffffff;\n    width: 40px;\n    height: 40px;\n    margin-top:8px;\n    background-image: url(\"data:image/svg+xml;charset=utf8,%3Csvg  viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E\");\n}\n.customtoggler:focus{\n    outline:0;\n}\n.outer {\n  width: 100%;\n  text-align: center;\n}\n.content-text{\n    text-align: center;\n    display: inline-block;\n}\n", ""]);
+exports.push([module.i, ".navbarstyle {\n    background: #005B54;\n 	background-image: url('background.png');\n		background-size: 100%;\n}\n.container {\n    max-width: 1200px;\n      margin: 0 auto;\n}\n.footerstyle{\nbackground: #005B54;\n}\n.style{\ncolor: #ffffff;\nfont-family: sans-serif;\nline-height: 2;\nfont-size: 24px;\n}\n.style:hover{\ncolor: #bbbbbb;\n}\n.style2{\ncolor: #ffffff;\nfont-family: sans-serif;\nline-height: 2;\nfont-size: 18px;\n}\n.style2:hover{\ncolor: #bbbbbb;\n}\n.style2:focus{\ncolor: #bbbbbb;\n}\n\n.footerstyle a {\n    color: #ffffff;\n    font-weight: bold;\n}\n.footerstyle a:hover {\ncolor: #bbbbbb;\ntext-decoration: none;\n}\n\n.footerstyle p{\n    color: #ffffff;\n    font-family: sans-serif;\n    font-size: 16px;\n}\n.links a {\nfont-family: sans-serif;\nfont-size: 18px;\nfont-weight: bold;\n}\n\n.customtoggler {\n    border-color: #ffffff;\n    width: 40px;\n    height: 40px;\n    margin-top:8px;\n    background-image: url(\"data:image/svg+xml;charset=utf8,%3Csvg  viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E\");\n}\n.customtoggler:focus{\n    outline:0;\n}\n.outer {\n  width: 100%;\n  text-align: center;\n}\n.content-text{\n    text-align: center;\n    display: inline-block;\n}\n", ""]);
 
 // exports
 
@@ -38132,7 +38132,7 @@ var ZFooter = function (_React$Component) {
                     _react2.default.createElement(
                       'b',
                       null,
-                      ' MY.ZEL.CASH'
+                      ' WALLET.SAFECOIN.ORG'
                     )
                   ),
                   _react2.default.createElement(
@@ -38140,74 +38140,74 @@ var ZFooter = function (_React$Component) {
                     { className: 'f2' },
                     'Keys are validated client-side and do not leave your browser or network. You are responsible for keeping your own keys safe!!!'
                   ),
-                  _react2.default.createElement(
-                    'p',
-                    null,
-                    _react2.default.createElement(
-                      'span',
-                      { className: 'f3' },
-                      'All donations goes directly to charity!'
-                    ),
-                    _react2.default.createElement(
-                      'a',
-                      { href: 'https://www.zel.cash/charity/', target: '_blank', 'data-toggle': 'tooltip', title: 'Zelcash Charity' },
-                      ' ',
-                      _react2.default.createElement(
-                        'span',
-                        { className: 'f4' },
-                        'More about Zelcash charity'
-                      )
-                    ),
-                    _react2.default.createElement('br', null),
-                    _react2.default.createElement('br', null)
-                  )
+                  //_react2.default.createElement(
+                  //  'p',
+                  //  null,
+                  //  _react2.default.createElement(
+                  //    'span',
+                  //    { className: 'f3' },
+                  //    'All donations goes directly to charity!'
+                  //  ),
+                  //  _react2.default.createElement(
+                  //    'a',
+                  //    { href: 'https://www.zel.cash/charity/', target: '_blank', 'data-toggle': 'tooltip', title: 'SafeCoin Charity' },
+                  //    ' ',
+                  //   _react2.default.createElement(
+                  //      'span',
+                  //      { className: 'f4' },
+                  //      'More about safecoin charity'
+                  //    )
+                  //  ),
+                  //  _react2.default.createElement('br', null),
+                  //  _react2.default.createElement('br', null)
+                  //)
                 )
               ),
               _react2.default.createElement(
                 'a',
-                { href: 'https://zel.cash', target: '_blank', 'data-toggle': 'tooltip', title: 'Website' },
+                { href: 'https://safecoin.org', target: '_blank', 'data-toggle': 'tooltip', title: 'Website' },
                 '  ',
                 _react2.default.createElement(_home2.default, { size: 28 }),
                 '  '
               ),
               _react2.default.createElement(
                 'a',
-                { href: 'https://discord.gg/tTpj2Wm', target: '_blank', 'data-toggle': 'tooltip', title: 'Discord' },
+                { href: 'https://discord.gg/wvteEF3', target: '_blank', 'data-toggle': 'tooltip', title: 'Discord' },
                 '  ',
                 _react2.default.createElement(_comments2.default, { size: 28 }),
                 '  '
               ),
               _react2.default.createElement(
                 'a',
-                { href: 'https://twitter.com/Zelcash', target: '_blank', 'data-toggle': 'tooltip', title: 'Twitter' },
+                { href: 'https://twitter.com/safecoins', target: '_blank', 'data-toggle': 'tooltip', title: 'Twitter' },
                 '  ',
                 _react2.default.createElement(_twitter2.default, { size: 28 }),
                 '  '
               ),
               _react2.default.createElement(
                 'a',
-                { href: 'https://reddit.com/r/ZelCash', target: '_blank', 'data-toggle': 'tooltip', title: 'Reddit' },
+                { href: 'https://www.reddit.com/r/SafeCoins/', target: '_blank', 'data-toggle': 'tooltip', title: 'Reddit' },
                 '  ',
                 _react2.default.createElement(_redditAlien2.default, { size: 28 }),
                 '  '
               ),
               _react2.default.createElement(
                 'a',
-                { href: 'https://bitcointalk.org/index.php?topic=2853688.0', target: '_blank', 'data-toggle': 'tooltip', title: 'Bitcoin Talk' },
+                { href: 'https://bitcointalk.org/index.php?topic=2838370', target: '_blank', 'data-toggle': 'tooltip', title: 'Bitcoin Talk' },
                 '  ',
                 _react2.default.createElement(_bitcoin2.default, { size: 28 }),
                 '  '
               ),
               _react2.default.createElement(
                 'a',
-                { href: 'https://github.com/TheTrunk/myzelcash', target: '_blank', 'data-toggle': 'tooltip', title: 'Source Code' },
+                { href: 'https://github.com/OleksandrBlack/mysafecoinwallet', target: '_blank', 'data-toggle': 'tooltip', title: 'Source Code' },
                 '  ',
                 _react2.default.createElement(_github2.default, { size: 28 }),
                 ' '
               ),
               _react2.default.createElement(
                 'a',
-                { href: 'mailto:info@zel.cash', target: '_blank', 'data-toggle': 'tooltip', title: 'info@zel.cash' },
+                { href: 'mailto:fair-exchange@protonmail.com', target: '_blank', 'data-toggle': 'tooltip', title: 'info@zel.cash' },
                 '  ',
                 _react2.default.createElement(_envelopeO2.default, { size: 28 }),
                 '  '
@@ -38695,33 +38695,33 @@ curve.edwards = __webpack_require__(418);
 /***/ (function(module, exports) {
 
 /*
-config.js - Configuration for Zelcash
+config.js - Configuration for safecoin
 */
 
 module.exports = {
     mainnet: {
-        messagePrefix: 'Zelcash mainnet',
+        messagePrefix: 'safecoin mainnet',
         bip32: {
-            public: '0488b21e',
-            private: '0488ade4'
+            public: '0488b21f',
+            private: '0488ade5'
         },
-        pubKeyHash: '1cb8',
-        scriptHash: '1cbd',
-        zcPaymentAddressHash: '169a',
+        pubKeyHash: '3d',
+        scriptHash: '56',
+        zcPaymentAddressHash: '159a',
         zcSpendingKeyHash: 'ab36',
-        wif: '80'
+        wif: 'bd'
     },
     testnet: {
-        messagePrefix: 'Zelcash testnet',
+        messagePrefix: 'safecoin testnet',
         bip32: {
             public: '043587cf',
             private: '04358394'
         },
-        pubKeyHash: '1d25',
-        scriptHash: '1cba',
-        zcPaymentAddressHash: '16b6',
-        zcSpendingKeyHash: 'ac08',
-        wif: 'ef'
+        pubKeyHash: '00',
+        scriptHash: '05',
+        zcPaymentAddressHash: '1451',
+        zcSpendingKeyHash: 'b1eb',
+        wif: '80'
     }
 };
 
@@ -39703,10 +39703,10 @@ function WIFToPrivKey(wifPk) {
 }
 
 /*
- * Converts public key to zelcash address
+ * Converts public key to safecoin address
  * @param {String} pubKey (public key)
  * @param {String} pubKeyHash (public key hash (optional, else use defaul))
- * @return {Sting} zelcash address
+ * @return {Sting} safecoin address
  */
 function pubKeyToAddr(pubKey, pubKeyHash) {
   pubKeyHash = pubKeyHash || zconfig.mainnet.pubKeyHash;
@@ -50244,7 +50244,7 @@ var _reactTable2 = _interopRequireDefault(_reactTable);
 
 var _zelcashjs = __webpack_require__(298);
 
-var _zelcashjs2 = _interopRequireDefault(_zelcashjs);
+var _safecoinjs2 = _interopRequireDefault(_zelcashjs);
 
 var _utils = __webpack_require__(498);
 
@@ -50374,10 +50374,10 @@ var ZWalletGenerator = function (_React$Component2) {
     key: 'handlePasswordPhrase',
     value: function handlePasswordPhrase(e) {
       // What wif format do we use?
-      var wifHash = this.props.settings.useTestNet ? _zelcashjs2.default.config.testnet.wif : _zelcashjs2.default.config.mainnet.wif;
+      var wifHash = this.props.settings.useTestNet ? _safecoinjs2.default.config.testnet.wif : _safecoinjs2.default.config.mainnet.wif;
 
-      var pk = _zelcashjs2.default.address.mkPrivKey(e.target.value);
-      var pkwif = _zelcashjs2.default.address.privKeyToWIF(pk, true, wifHash);
+      var pk = _safecoinjs2.default.address.mkPrivKey(e.target.value);
+      var pkwif = _safecoinjs2.default.address.privKeyToWIF(pk, true, wifHash);
 
       if (e.target.value === '') {
         pkwif = '';
@@ -50592,14 +50592,14 @@ var ZWalletUnlockKey = function (_React$Component3) {
                   { className: 'import4' },
                   'For Windows, it should be in'
                 ),
-                ' %APPDATA%/zelcash',
+                ' %APPDATA%/safecoin',
                 _react2.default.createElement('br', null),
                 _react2.default.createElement(
                   'span',
                   { className: 'import5' },
                   'For Mac/Linux, it should be in'
                 ),
-                ' ~/.zelcash'
+                ' ~/.safecoin'
               )
             )
           )
@@ -50724,7 +50724,7 @@ var ZWalletUnlockKey = function (_React$Component3) {
               onChange: function onChange(e) {
                 return _this5.setState({ secretPhrase: e.target.value });
               },
-              placeholder: 'Secret phrase. e.g. cash cow money heros cardboard money bag late green'
+              placeholder: 'Write secret phrase. e.g. cash cow money heros cardboard money bag late green'
             })
           ),
           _react2.default.createElement(
@@ -50771,7 +50771,7 @@ var ZWalletSettings = function (_React$Component4) {
           _react2.default.createElement(
             'span',
             { className: 'settings1' },
-            'Zelcash Wallet Settings'
+            'SafeCoin Wallet Settings'
           )
         ),
         _react2.default.createElement(
@@ -51131,13 +51131,13 @@ var ZAddressInfo = function (_React$Component5) {
   return ZAddressInfo;
 }(_react2.default.Component);
 
-var ZSendZEL = function (_React$Component6) {
-  _inherits(ZSendZEL, _React$Component6);
+var ZSendSAFE = function (_React$Component6) {
+  _inherits(ZSendSAFE, _React$Component6);
 
-  function ZSendZEL(props) {
-    _classCallCheck(this, ZSendZEL);
+  function ZSendSAFE(props) {
+    _classCallCheck(this, ZSendSAFE);
 
-    var _this10 = _possibleConstructorReturn(this, (ZSendZEL.__proto__ || Object.getPrototypeOf(ZSendZEL)).call(this, props));
+    var _this10 = _possibleConstructorReturn(this, (ZSendSAFE.__proto__ || Object.getPrototypeOf(ZSendSAFE)).call(this, props));
 
     _this10.setProgressValue = _this10.setProgressValue.bind(_this10);
     _this10.setSendErrorMessage = _this10.setSendErrorMessage.bind(_this10);
@@ -51146,7 +51146,7 @@ var ZSendZEL = function (_React$Component6) {
     _this10.handleUpdateAmount = _this10.handleUpdateAmount.bind(_this10);
     _this10.handleCheckChanged = _this10.handleCheckChanged.bind(_this10);
     _this10.handleUpdateFee = _this10.handleUpdateFee.bind(_this10);
-    _this10.handleSendZEL = _this10.handleSendZEL.bind(_this10);
+    _this10.handleSendSAFE = _this10.handleSendSAFE.bind(_this10);
 
     _this10.state = {
       selectedAddress: '', // which address did we select
@@ -51161,7 +51161,7 @@ var ZSendZEL = function (_React$Component6) {
     return _this10;
   }
 
-  _createClass(ZSendZEL, [{
+  _createClass(ZSendSAFE, [{
     key: 'handleUpdateSelectedAddress',
     value: function handleUpdateSelectedAddress(e) {
       this.setState({
@@ -51211,8 +51211,8 @@ var ZSendZEL = function (_React$Component6) {
       });
     }
   }, {
-    key: 'handleSendZEL',
-    value: function handleSendZEL() {
+    key: 'handleSendSAFE',
+    value: function handleSendSAFE() {
       var value = this.state.amount;
       var fee = this.state.fee;
       var recipientAddress = this.state.recipientAddress;
@@ -51223,7 +51223,7 @@ var ZSendZEL = function (_React$Component6) {
       var satoshisToSend = Math.round(value * 100000000);
       var satoshisfeesToSend = Math.round(fee * 100000000);
 
-      // Reset zelcash send progress and error message
+      // Reset safecoin send progress and error message
       this.setProgressValue(1);
       this.setSendErrorMessage('');
 
@@ -51305,7 +51305,7 @@ var ZSendZEL = function (_React$Component6) {
           // If we don't have enough address
           // fail and tell user
           if (satoshisSoFar < satoshisToSend + satoshisfeesToSend) {
-            this.setSendErrorMessage('Not enough confirmed ZEL in account to perform transaction');
+            this.setSendErrorMessage('Not enough confirmed SAFE in account to perform transaction');
             this.setProgressValue(0);
           }
 
@@ -51317,15 +51317,15 @@ var ZSendZEL = function (_React$Component6) {
           }
 
           // Create transaction
-          var txObj = _zelcashjs2.default.transaction.createRawTx(history, recipients);
+          var txObj = _safecoinjs2.default.transaction.createRawTx(history, recipients);
 
           // Sign each history transcation          
           for (var i = 0; i < history.length; i++) {
-            txObj = _zelcashjs2.default.transaction.signTx(txObj, i, senderPrivateKey, this.props.settings.compressPubKey);
+            txObj = _safecoinjs2.default.transaction.signTx(txObj, i, senderPrivateKey, this.props.settings.compressPubKey);
           }
 
           // Convert it to hex string
-          var txHexString = _zelcashjs2.default.transaction.serializeTx(txObj);
+          var txHexString = _safecoinjs2.default.transaction.serializeTx(txObj);
 
           _axios2.default.post(sendRawTxURL, { rawtx: txHexString }).then(function (sendtx_resp) {
             this.setState({
@@ -51348,10 +51348,10 @@ var ZSendZEL = function (_React$Component6) {
     key: 'render',
     value: function render() {
       // If send was successful
-      var zelcashTxLink;
+      var safecoinTxLink;
       if (this.state.sendProgress === 100) {
-        var zelcashtx = _utils2.default.urlAppend(this.props.settings.explorerURL, 'tx/') + this.state.sentTxid;
-        zelcashTxLink = _react2.default.createElement(
+        var safecointx = _utils2.default.urlAppend(this.props.settings.explorerURL, 'tx/') + this.state.sentTxid;
+        safecoinTxLink = _react2.default.createElement(
           _reactstrap.Alert,
           { color: 'success' },
           _react2.default.createElement(
@@ -51360,13 +51360,13 @@ var ZSendZEL = function (_React$Component6) {
             _react2.default.createElement(
               'span',
               { className: 'send1' },
-              'ZEL successfully sent!'
+              'SAFE successfully sent!'
             )
           ),
           ' ',
           _react2.default.createElement(
             'a',
-            { href: zelcashtx },
+            { href: safecointx },
             _react2.default.createElement(
               'span',
               { className: 'send2' },
@@ -51378,7 +51378,7 @@ var ZSendZEL = function (_React$Component6) {
 
       // Else show error why
       else if (this.state.sendErrorMessage !== '') {
-          zelcashTxLink = this.state.sendErrorMessage.split(';').map(function (s) {
+          safecoinTxLink = this.state.sendErrorMessage.split(';').map(function (s) {
             if (s !== '') {
               return _react2.default.createElement(
                 _reactstrap.Alert,
@@ -51433,7 +51433,7 @@ var ZSendZEL = function (_React$Component6) {
                 _react2.default.createElement(
                   'span',
                   { className: 'send3' },
-                  'ALWAYS VALIDATE YOUR DESINATION ADDRESS BY SENDING SMALL AMOUNTS OF ZEL FIRST'
+                  'ALWAYS VALIDATE YOUR DESINATION ADDRESS BY SENDING SMALL AMOUNTS OF SAFE FIRST'
                 )
               ),
               _react2.default.createElement(
@@ -51509,7 +51509,7 @@ var ZSendZEL = function (_React$Component6) {
                   _react2.default.createElement(
                     'span',
                     { className: 'send8' },
-                    'Yes, I would like to send these ZEL'
+                    'Yes, I would like to send these SAFE'
                   )
                 )
               ),
@@ -51519,7 +51519,7 @@ var ZSendZEL = function (_React$Component6) {
                 {
                   color: 'warning', className: 'btn-block',
                   disabled: !this.state.confirmSend || this.state.sendProgress > 0 && this.state.sendProgress < 100,
-                  onClick: this.handleSendZEL
+                  onClick: this.handleSendSAFE
                 },
                 _react2.default.createElement(
                   'span',
@@ -51531,7 +51531,7 @@ var ZSendZEL = function (_React$Component6) {
             _react2.default.createElement(
               _reactstrap.CardFooter,
               null,
-              zelcashTxLink,
+              safecoinTxLink,
               _react2.default.createElement(_reactstrap.Progress, { value: this.state.sendProgress })
             )
           )
@@ -51540,7 +51540,7 @@ var ZSendZEL = function (_React$Component6) {
     }
   }]);
 
-  return ZSendZEL;
+  return ZSendSAFE;
 }(_react2.default.Component);
 
 var ZWalletSelectUnlockType = function (_React$Component7) {
@@ -51742,7 +51742,7 @@ var ZWalletTabs = function (_React$Component9) {
       var now = new Date();
       now = now.toISOString().split('.')[0] + 'Z';
 
-      var fileStr = '# Wallet dump created by myzelcash ' + _package2.default.version + '\n';
+      var fileStr = '# Wallet dump created by mysafecoin ' + _package2.default.version + '\n';
       fileStr += '# Created on ' + now + '\n\n\n';
 
       Object.keys(this.props.publicAddresses).forEach(function (key) {
@@ -51752,7 +51752,7 @@ var ZWalletTabs = function (_React$Component9) {
       }.bind(this));
 
       var pkBlob = new Blob([fileStr], { type: 'text/plain;charset=utf-8' });
-      _fileSaver2.default.saveAs(pkBlob, now + '_myzelcash_private_keys.txt');
+      _fileSaver2.default.saveAs(pkBlob, now + '_mysafecoin_private_keys.txt');
     }
   }, {
     key: 'render',
@@ -51797,7 +51797,7 @@ var ZWalletTabs = function (_React$Component9) {
               _react2.default.createElement(
                 'span',
                 { className: 'menu2' },
-                'Send ZEL'
+                'Send SAFE'
               )
             )
           ),
@@ -51835,7 +51835,7 @@ var ZWalletTabs = function (_React$Component9) {
           _react2.default.createElement(
             _reactstrap.TabPane,
             { tabId: '2' },
-            _react2.default.createElement(ZSendZEL, {
+            _react2.default.createElement(ZSendSAFE, {
               settings: this.props.settings,
               publicAddresses: this.props.publicAddresses
             })
@@ -51920,8 +51920,8 @@ var ZWallet = function (_React$Component10) {
         showSettings: false,
         showWalletGen: false,
         compressPubKey: true,
-        insightAPI: 'https://explorer.zel.cash/api',
-        explorerURL: 'https://explorer.zel.cash/',
+        insightAPI: 'https://explorer.safecoin.org/api',
+        explorerURL: 'https://explorer.safecoin.org/',
         useTestNet: false,
         unlockType: UNLOCK_WALLET_TYPE.HD_WALLET
       }
@@ -51940,15 +51940,15 @@ var ZWallet = function (_React$Component10) {
         var _privKeyToAddr = function _privKeyToAddr(pk, compressPubKey, useTestNet) {
           // If not 64 length, probs WIF format
           if (pk.length !== 64) {
-            pk = _zelcashjs2.default.address.WIFToPrivKey(pk);
+            pk = _safecoinjs2.default.address.WIFToPrivKey(pk);
           }
 
           // Convert public key to public address
-          var pubKey = _zelcashjs2.default.address.privKeyToPubKey(pk, compressPubKey);
+          var pubKey = _safecoinjs2.default.address.privKeyToPubKey(pk, compressPubKey);
 
           // Testnet or nah
-          var pubKeyHash = useTestNet ? _zelcashjs2.default.config.testnet.pubKeyHash : _zelcashjs2.default.config.mainnet.pubKeyHash;
-          var publicAddr = _zelcashjs2.default.address.pubKeyToAddr(pubKey, pubKeyHash);
+          var pubKeyHash = useTestNet ? _safecoinjs2.default.config.testnet.pubKeyHash : _safecoinjs2.default.config.mainnet.pubKeyHash;
+          var publicAddr = _safecoinjs2.default.address.pubKeyToAddr(pubKey, pubKeyHash);
 
           return publicAddr;
         };
@@ -51956,7 +51956,7 @@ var ZWallet = function (_React$Component10) {
         var publicAddresses = {};
 
         for (var i = 0; i < this.state.privateKeys.length; i++) {
-          var pubKeyHash = this.state.settings.useTestNet ? _zelcashjs2.default.config.testnet.wif : _zelcashjs2.default.config.mainnet.wif;
+          var pubKeyHash = this.state.settings.useTestNet ? _safecoinjs2.default.config.testnet.wif : _safecoinjs2.default.config.mainnet.wif;
 
           var c_pk_wif;
           var c_pk = this.state.privateKeys[i];
@@ -51964,12 +51964,12 @@ var ZWallet = function (_React$Component10) {
           // If not 64 length, probs WIF format
           if (c_pk.length !== 64) {
             c_pk_wif = c_pk;
-            c_pk = _zelcashjs2.default.address.WIFToPrivKey(c_pk);
+            c_pk = _safecoinjs2.default.address.WIFToPrivKey(c_pk);
           } else {
-            c_pk_wif = _zelcashjs2.default.address.privKeyToWIF(c_pk);
+            c_pk_wif = _safecoinjs2.default.address.privKeyToWIF(c_pk);
           }
 
-          var c_pk_wif = _zelcashjs2.default.address.privKeyToWIF(c_pk, true, pubKeyHash);
+          var c_pk_wif = _safecoinjs2.default.address.privKeyToWIF(c_pk, true, pubKeyHash);
           var c_addr = _privKeyToAddr(c_pk, this.state.settings.compressPubKey, this.state.settings.useTestNet);
 
           publicAddresses[c_addr] = {
@@ -52066,11 +52066,11 @@ var ZWallet = function (_React$Component10) {
       _settings.useTestNet = !_settings.useTestNet;
 
       if (_settings.useTestNet) {
-        _settings.insightAPI = 'https://testnet.zel.cash/api';
-        _settings.explorerURL = 'https://testnet.zel.cash/';
+        _settings.insightAPI = 'https://testnet.safecoin.org/api'; //needfix
+        _settings.explorerURL = 'https://testnet.safecoin.org/';
       } else {
-        _settings.insightAPI = 'https://explorer.zel.cash/api';
-        _settings.explorerURL = 'https://explorer.zel.cash/';
+        _settings.insightAPI = 'https://explorer.safecoin.org/api';
+        _settings.explorerURL = 'https://explorer.safecoin.org/';
       }
 
       this.setState({
@@ -52115,7 +52115,7 @@ var ZWallet = function (_React$Component10) {
               _react2.default.createElement(
                 'span',
                 { className: 'main1' },
-                'MyZelcash Wallet'
+                'MySafeCoin Wallet'
               ),
               '\xA0',
               _react2.default.createElement(ToolTipButton, { onClick: this.toggleShowSettings, id: 1, buttonText: _react2.default.createElement(_settings3.default, null), tooltipText: 'settings' }),
@@ -59091,7 +59091,7 @@ module.exports = function(module) {
 /* 412 */
 /***/ (function(module, exports) {
 
-module.exports = {"_args":[["elliptic@^6.0.0","C:\\Users\\TheTrunk\\source\\repos\\myzelcash\\node_modules\\browserify-sign"]],"_from":"elliptic@>=6.0.0-0 <7.0.0-0","_id":"elliptic@6.4.0","_inCache":true,"_location":"/elliptic","_nodeVersion":"7.0.0","_npmOperationalInternal":{"host":"packages-18-east.internal.npmjs.com","tmp":"tmp/elliptic-6.4.0.tgz_1487798866428_0.30510620190761983"},"_npmUser":{"email":"fedor@indutny.com","name":"indutny"},"_npmVersion":"3.10.8","_phantomChildren":{},"_requested":{"name":"elliptic","raw":"elliptic@^6.0.0","rawSpec":"^6.0.0","scope":null,"spec":">=6.0.0-0 <7.0.0-0","type":"range"},"_requiredBy":["/browserify-sign","/create-ecdh"],"_resolved":"https://registry.npmjs.org/elliptic/-/elliptic-6.4.0.tgz","_shasum":"cac9af8762c85836187003c8dfe193e5e2eae5df","_shrinkwrap":null,"_spec":"elliptic@^6.0.0","_where":"C:\\Users\\TheTrunk\\source\\repos\\myzelcash\\node_modules\\browserify-sign","author":{"email":"fedor@indutny.com","name":"Fedor Indutny"},"bugs":{"url":"https://github.com/indutny/elliptic/issues"},"dependencies":{"bn.js":"^4.4.0","brorand":"^1.0.1","hash.js":"^1.0.0","hmac-drbg":"^1.0.0","inherits":"^2.0.1","minimalistic-assert":"^1.0.0","minimalistic-crypto-utils":"^1.0.0"},"description":"EC cryptography","devDependencies":{"brfs":"^1.4.3","coveralls":"^2.11.3","grunt":"^0.4.5","grunt-browserify":"^5.0.0","grunt-cli":"^1.2.0","grunt-contrib-connect":"^1.0.0","grunt-contrib-copy":"^1.0.0","grunt-contrib-uglify":"^1.0.1","grunt-mocha-istanbul":"^3.0.1","grunt-saucelabs":"^8.6.2","istanbul":"^0.4.2","jscs":"^2.9.0","jshint":"^2.6.0","mocha":"^2.1.0"},"directories":{},"dist":{"shasum":"cac9af8762c85836187003c8dfe193e5e2eae5df","tarball":"https://registry.npmjs.org/elliptic/-/elliptic-6.4.0.tgz"},"files":["lib"],"gitHead":"6b0d2b76caae91471649c8e21f0b1d3ba0f96090","homepage":"https://github.com/indutny/elliptic","installable":true,"keywords":["Cryptography","EC","Elliptic","curve"],"license":"MIT","main":"lib/elliptic.js","maintainers":[{"name":"indutny","email":"fedor@indutny.com"}],"name":"elliptic","optionalDependencies":{},"repository":{"type":"git","url":"git+ssh://git@github.com/indutny/elliptic.git"},"scripts":{"jscs":"jscs benchmarks/*.js lib/*.js lib/**/*.js lib/**/**/*.js test/index.js","jshint":"jscs benchmarks/*.js lib/*.js lib/**/*.js lib/**/**/*.js test/index.js","lint":"npm run jscs && npm run jshint","test":"npm run lint && npm run unit","unit":"istanbul test _mocha --reporter=spec test/index.js","version":"grunt dist && git add dist/"},"version":"6.4.0"}
+module.exports = {"_args":[["elliptic@^6.0.0","C:\\Users\\TheTrunk\\source\\repos\\mysafecoin\\node_modules\\browserify-sign"]],"_from":"elliptic@>=6.0.0-0 <7.0.0-0","_id":"elliptic@6.4.0","_inCache":true,"_location":"/elliptic","_nodeVersion":"7.0.0","_npmOperationalInternal":{"host":"packages-18-east.internal.npmjs.com","tmp":"tmp/elliptic-6.4.0.tgz_1487798866428_0.30510620190761983"},"_npmUser":{"email":"fedor@indutny.com","name":"indutny"},"_npmVersion":"3.10.8","_phantomChildren":{},"_requested":{"name":"elliptic","raw":"elliptic@^6.0.0","rawSpec":"^6.0.0","scope":null,"spec":">=6.0.0-0 <7.0.0-0","type":"range"},"_requiredBy":["/browserify-sign","/create-ecdh"],"_resolved":"https://registry.npmjs.org/elliptic/-/elliptic-6.4.0.tgz","_shasum":"cac9af8762c85836187003c8dfe193e5e2eae5df","_shrinkwrap":null,"_spec":"elliptic@^6.0.0","_where":"C:\\Users\\TheTrunk\\source\\repos\\mysafecoin\\node_modules\\browserify-sign","author":{"email":"fedor@indutny.com","name":"Fedor Indutny"},"bugs":{"url":"https://github.com/indutny/elliptic/issues"},"dependencies":{"bn.js":"^4.4.0","brorand":"^1.0.1","hash.js":"^1.0.0","hmac-drbg":"^1.0.0","inherits":"^2.0.1","minimalistic-assert":"^1.0.0","minimalistic-crypto-utils":"^1.0.0"},"description":"EC cryptography","devDependencies":{"brfs":"^1.4.3","coveralls":"^2.11.3","grunt":"^0.4.5","grunt-browserify":"^5.0.0","grunt-cli":"^1.2.0","grunt-contrib-connect":"^1.0.0","grunt-contrib-copy":"^1.0.0","grunt-contrib-uglify":"^1.0.1","grunt-mocha-istanbul":"^3.0.1","grunt-saucelabs":"^8.6.2","istanbul":"^0.4.2","jscs":"^2.9.0","jshint":"^2.6.0","mocha":"^2.1.0"},"directories":{},"dist":{"shasum":"cac9af8762c85836187003c8dfe193e5e2eae5df","tarball":"https://registry.npmjs.org/elliptic/-/elliptic-6.4.0.tgz"},"files":["lib"],"gitHead":"6b0d2b76caae91471649c8e21f0b1d3ba0f96090","homepage":"https://github.com/indutny/elliptic","installable":true,"keywords":["Cryptography","EC","Elliptic","curve"],"license":"MIT","main":"lib/elliptic.js","maintainers":[{"name":"indutny","email":"fedor@indutny.com"}],"name":"elliptic","optionalDependencies":{},"repository":{"type":"git","url":"git+ssh://git@github.com/indutny/elliptic.git"},"scripts":{"jscs":"jscs benchmarks/*.js lib/*.js lib/**/*.js lib/**/**/*.js test/index.js","jshint":"jscs benchmarks/*.js lib/*.js lib/**/*.js lib/**/**/*.js test/index.js","lint":"npm run jscs && npm run jshint","test":"npm run lint && npm run unit","unit":"istanbul test _mocha --reporter=spec test/index.js","version":"grunt dist && git add dist/"},"version":"6.4.0"}
 
 /***/ }),
 /* 413 */
@@ -63499,7 +63499,7 @@ module.exports = Signature;
 /* 434 */
 /***/ (function(module, exports) {
 
-module.exports = {"_args":[["bigi@^1.4.0","C:\\Users\\TheTrunk\\source\\repos\\myzelcash\\node_modules\\bitcoinjs-lib"]],"_from":"bigi@>=1.4.0-0 <2.0.0-0","_id":"bigi@1.4.2","_inCache":true,"_location":"/bigi","_nodeVersion":"6.1.0","_npmOperationalInternal":{"host":"packages-12-west.internal.npmjs.com","tmp":"tmp/bigi-1.4.2.tgz_1469584192413_0.6801238611806184"},"_npmUser":{"email":"jprichardson@gmail.com","name":"jprichardson"},"_npmVersion":"3.8.6","_phantomChildren":{},"_requested":{"name":"bigi","raw":"bigi@^1.4.0","rawSpec":"^1.4.0","scope":null,"spec":">=1.4.0-0 <2.0.0-0","type":"range"},"_requiredBy":["/bitcoinjs-lib","/ecurve"],"_resolved":"https://registry.npmjs.org/bigi/-/bigi-1.4.2.tgz","_shasum":"9c665a95f88b8b08fc05cfd731f561859d725825","_shrinkwrap":null,"_spec":"bigi@^1.4.0","_where":"C:\\Users\\TheTrunk\\source\\repos\\myzelcash\\node_modules\\bitcoinjs-lib","bugs":{"url":"https://github.com/cryptocoinjs/bigi/issues"},"dependencies":{},"description":"Big integers.","devDependencies":{"coveralls":"^2.11.2","istanbul":"^0.3.5","jshint":"^2.5.1","mocha":"^2.1.0","mochify":"^2.1.0"},"directories":{},"dist":{"shasum":"9c665a95f88b8b08fc05cfd731f561859d725825","tarball":"https://registry.npmjs.org/bigi/-/bigi-1.4.2.tgz"},"gitHead":"c25308081c896ff84702303722bf5ecd8b3f78e3","homepage":"https://github.com/cryptocoinjs/bigi#readme","installable":true,"keywords":["arbitrary","arithmetic","big","bigint","biginteger","bignumber","bitcoin","cryptography","decimal","float","int","integer","math","number","precision"],"main":"./lib/index.js","maintainers":[{"name":"midnightlightning","email":"boydb@midnightdesign.ws"},{"name":"sidazhang","email":"sidazhang89@gmail.com"},{"name":"nadav","email":"npm@shesek.info"},{"name":"jprichardson","email":"jprichardson@gmail.com"}],"name":"bigi","optionalDependencies":{},"repository":{"type":"git","url":"git+https://github.com/cryptocoinjs/bigi.git"},"scripts":{"browser-test":"mochify --wd -R spec","coverage":"istanbul cover ./node_modules/.bin/_mocha -- --reporter list test/*.js","coveralls":"npm run-script coverage && node ./node_modules/.bin/coveralls < coverage/lcov.info","jshint":"jshint --config jshint.json lib/*.js ; true","test":"_mocha -- test/*.js","unit":"mocha"},"testling":{"browsers":["android-browser/4.2..latest","chrome/latest","firefox/latest","ie/9..latest","iphone/6.0..latest","safari/6.0..latest"],"files":"test/*.js","harness":"mocha"},"version":"1.4.2"}
+module.exports = {"_args":[["bigi@^1.4.0","C:\\Users\\TheTrunk\\source\\repos\\mysafecoin\\node_modules\\bitcoinjs-lib"]],"_from":"bigi@>=1.4.0-0 <2.0.0-0","_id":"bigi@1.4.2","_inCache":true,"_location":"/bigi","_nodeVersion":"6.1.0","_npmOperationalInternal":{"host":"packages-12-west.internal.npmjs.com","tmp":"tmp/bigi-1.4.2.tgz_1469584192413_0.6801238611806184"},"_npmUser":{"email":"jprichardson@gmail.com","name":"jprichardson"},"_npmVersion":"3.8.6","_phantomChildren":{},"_requested":{"name":"bigi","raw":"bigi@^1.4.0","rawSpec":"^1.4.0","scope":null,"spec":">=1.4.0-0 <2.0.0-0","type":"range"},"_requiredBy":["/bitcoinjs-lib","/ecurve"],"_resolved":"https://registry.npmjs.org/bigi/-/bigi-1.4.2.tgz","_shasum":"9c665a95f88b8b08fc05cfd731f561859d725825","_shrinkwrap":null,"_spec":"bigi@^1.4.0","_where":"C:\\Users\\TheTrunk\\source\\repos\\mysafecoin\\node_modules\\bitcoinjs-lib","bugs":{"url":"https://github.com/cryptocoinjs/bigi/issues"},"dependencies":{},"description":"Big integers.","devDependencies":{"coveralls":"^2.11.2","istanbul":"^0.3.5","jshint":"^2.5.1","mocha":"^2.1.0","mochify":"^2.1.0"},"directories":{},"dist":{"shasum":"9c665a95f88b8b08fc05cfd731f561859d725825","tarball":"https://registry.npmjs.org/bigi/-/bigi-1.4.2.tgz"},"gitHead":"c25308081c896ff84702303722bf5ecd8b3f78e3","homepage":"https://github.com/cryptocoinjs/bigi#readme","installable":true,"keywords":["arbitrary","arithmetic","big","bigint","biginteger","bignumber","bitcoin","cryptography","decimal","float","int","integer","math","number","precision"],"main":"./lib/index.js","maintainers":[{"name":"midnightlightning","email":"boydb@midnightdesign.ws"},{"name":"sidazhang","email":"sidazhang89@gmail.com"},{"name":"nadav","email":"npm@shesek.info"},{"name":"jprichardson","email":"jprichardson@gmail.com"}],"name":"bigi","optionalDependencies":{},"repository":{"type":"git","url":"git+https://github.com/cryptocoinjs/bigi.git"},"scripts":{"browser-test":"mochify --wd -R spec","coverage":"istanbul cover ./node_modules/.bin/_mocha -- --reporter list test/*.js","coveralls":"npm run-script coverage && node ./node_modules/.bin/coveralls < coverage/lcov.info","jshint":"jshint --config jshint.json lib/*.js ; true","test":"_mocha -- test/*.js","unit":"mocha"},"testling":{"browsers":["android-browser/4.2..latest","chrome/latest","firefox/latest","ie/9..latest","iphone/6.0..latest","safari/6.0..latest"],"files":"test/*.js","harness":"mocha"},"version":"1.4.2"}
 
 /***/ }),
 /* 435 */
@@ -73709,7 +73709,7 @@ var zbufferutils = __webpack_require__(334);
 /* More info: https://github.com/ZencashOfficial/zen/blob/master/src/script/standard.cpp#L377
  * Given an address, generates a pubkeyhash replay type script needed for the transaction
  * @param {String} address
- * @param {Number} blockHeight NOPE not in zelcash
+ * @param {Number} blockHeight NOPE not in safecoin
  * @param {String} pubKeyHash (optional)
  * return {String} pubKeyScript
  */
@@ -73733,7 +73733,7 @@ function mkPubkeyHashReplayScript(address, pubKeyHash) {
 /*
  * Given an address, generates a script hash replay type script needed for the transaction
  * @param {String} address
- * @param {Number} blockHeight NOPE not in zelcash
+ * @param {Number} blockHeight NOPE not in safecoin
  * return {String} scriptHash script
  */
 function mkScriptHashReplayScript(address) {
@@ -73748,7 +73748,7 @@ function mkScriptHashReplayScript(address) {
 /*
  * Given an address, generates an output script
  * @param {String} address
- * @param {Number} blockHeight NOPE not in zelcash
+ * @param {Number} blockHeight NOPE not in safecoin
  * return {String} output script
  */
 function addressToScript(address) {
@@ -73920,7 +73920,7 @@ function serializeTx(txObj) {
  * Creates a raw transaction
  * @param {[HISTORY]} history type, array of transaction history
  * @param {[RECIPIENTS]} recipient type, array of address on where to send coins to
- * @param {Number} blockHeight (latest - 300) NOPE not in zelcash
+ * @param {Number} blockHeight (latest - 300) NOPE not in safecoin
  * @return {TXOBJ} Transction Object (see TXOBJ type for info about structure)
  */
 function createRawTx(history, recipients) {
@@ -74311,7 +74311,7 @@ var Uint64BE, Int64BE, Uint64LE, Int64LE;
 
 module.exports = {
   /* SIGHASH Codes
-   * Obtained from: https://github.com/Scribbles-MCAMK/Zelcash/blob/master/src/script/interpreter.h
+   * Obtained from: https://github.com/Scribbles-MCAMK/safecoin/blob/master/src/script/interpreter.h
    */
   SIGHASH_ALL: 1,
   SIGHASH_NONE: 2,
@@ -74325,7 +74325,7 @@ module.exports = {
 
 
 /* Useful OP codes for the scripting language
- * Obtained from: https://github.com/Scribbles-MCAMK/Zelcash/blob/master/src/script/script.h
+ * Obtained from: https://github.com/Scribbles-MCAMK/safecoin/blob/master/src/script/script.h
  */
 
 module.exports = {
@@ -83103,7 +83103,7 @@ module.exports = exports['default'];
 /* 538 */
 /***/ (function(module, exports) {
 
-module.exports = {"name":"myzelcash","version":"v2.1.0","description":"Secure Zelcash wallet online","main":"index.js","repository":"https://github.com/TheTrunk/myzelcash.git","author":"TheTrunk","license":"MIT","scripts":{"start":"webpack-dev-server","watch":"webpack --watch","build":"webpack"},"dependencies":{"axios":"^0.16.2","babel-preset-env":"^1.6.0","bip32-utils":"git://github.com/TheTrunk/bip32-utils#master","bitcoinjs-lib":"git://github.com/TheTrunk/bitcoinjs-lib#master","bluebird":"^3.5.0","bootstrap":"^4.0.0-alpha.6","bs58":"^4.0.1","bs58check":"^2.0.2","classnames":"^2.2.5","css-loader":"^0.28.4","file-loader":"^0.11.2","file-saver":"^1.3.3","fs":"^0.0.1-security","hash.js":"^1.1.3","html-webpack-plugin":"^2.30.1","zelcashjs":"git://github.com/TheTrunk/zelcashjs#master","path":"^0.12.7","qrcode.react":"^0.7.1","react":"^15.6.1","react-addons-css-transition-group":"^15.6.0","react-addons-transition-group":"^15.6.0","react-bootstrap":"^0.31.1","react-copy-to-clipboard":"^5.0.0","react-dom":"^15.6.1","react-icons":"^2.2.5","react-table":"^6.5.3","reactstrap":"^4.8.0","style-loader":"^0.18.2","throttled-queue":"^1.0.4","webpack":"^3.3.0","webpack-dev-server":"^2.5.1","html-react-parser":"^0.4.1"},"devDependencies":{"babel-core":"^6.25.0","babel-loader":"^7.1.1","babel-preset-es2015":"^6.24.1","babel-preset-react":"^6.24.1","css-loader":"^0.28.4"}}
+module.exports = {"name":"mysafecoin","version":"v2.1.0","description":"Secure safecoin wallet online","main":"index.js","repository":"https://github.com/OleksandrBlack/mysafecoinwallet.git","author":"TheTrunk","license":"MIT","scripts":{"start":"webpack-dev-server","watch":"webpack --watch","build":"webpack"},"dependencies":{"axios":"^0.16.2","babel-preset-env":"^1.6.0","bip32-utils":"git://github.com/TheTrunk/bip32-utils#master","bitcoinjs-lib":"git://github.com/TheTrunk/bitcoinjs-lib#master","bluebird":"^3.5.0","bootstrap":"^4.0.0-alpha.6","bs58":"^4.0.1","bs58check":"^2.0.2","classnames":"^2.2.5","css-loader":"^0.28.4","file-loader":"^0.11.2","file-saver":"^1.3.3","fs":"^0.0.1-security","hash.js":"^1.1.3","html-webpack-plugin":"^2.30.1","zelcashjs":"git://github.com/TheTrunk/zelcashjs#master","path":"^0.12.7","qrcode.react":"^0.7.1","react":"^15.6.1","react-addons-css-transition-group":"^15.6.0","react-addons-transition-group":"^15.6.0","react-bootstrap":"^0.31.1","react-copy-to-clipboard":"^5.0.0","react-dom":"^15.6.1","react-icons":"^2.2.5","react-table":"^6.5.3","reactstrap":"^4.8.0","style-loader":"^0.18.2","throttled-queue":"^1.0.4","webpack":"^3.3.0","webpack-dev-server":"^2.5.1","html-react-parser":"^0.4.1"},"devDependencies":{"babel-core":"^6.25.0","babel-loader":"^7.1.1","babel-preset-es2015":"^6.24.1","babel-preset-react":"^6.24.1","css-loader":"^0.28.4"}}
 
 /***/ })
 /******/ ]);

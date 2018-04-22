@@ -27753,7 +27753,7 @@ var ZNavbar = function (_React$Component) {
             _react2.default.createElement(
               _reactstrap.NavbarBrand,
               { className: 'style', href: '/' },
-              _react2.default.createElement('img', { src: './zelcashlogo.png', height: 50 })
+              _react2.default.createElement('img', { src: './safecoinlogo.png', height: 50 })
             ),
             _react2.default.createElement(
               _reactstrap.Collapse,
@@ -30875,7 +30875,7 @@ var ZFooter = function (_React$Component) {
                     _react2.default.createElement(
                       'b',
                       null,
-                      ' MY.ZEL.CASH'
+                      ' WALLET.SAFECOIN.ORG'
                     )
                   ),
                   _react2.default.createElement(
@@ -30908,49 +30908,49 @@ var ZFooter = function (_React$Component) {
               ),
               _react2.default.createElement(
                 'a',
-                { href: 'https://zel.cash', target: '_blank', 'data-toggle': 'tooltip', title: 'Website' },
+                { href: 'https://safecoin.org', target: '_blank', 'data-toggle': 'tooltip', title: 'Website' },
                 '  ',
                 _react2.default.createElement(_home2.default, { size: 28 }),
                 '  '
               ),
               _react2.default.createElement(
                 'a',
-                { href: 'https://discord.gg/tTpj2Wm', target: '_blank', 'data-toggle': 'tooltip', title: 'Discord' },
+                { href: 'https://discord.gg/wvteEF3', target: '_blank', 'data-toggle': 'tooltip', title: 'Discord' },
                 '  ',
                 _react2.default.createElement(_comments2.default, { size: 28 }),
                 '  '
               ),
               _react2.default.createElement(
                 'a',
-                { href: 'https://twitter.com/Zelcash', target: '_blank', 'data-toggle': 'tooltip', title: 'Twitter' },
+                { href: 'https://twitter.com/safecoins', target: '_blank', 'data-toggle': 'tooltip', title: 'Twitter' },
                 '  ',
                 _react2.default.createElement(_twitter2.default, { size: 28 }),
                 '  '
               ),
               _react2.default.createElement(
                 'a',
-                { href: 'https://reddit.com/r/ZelCash', target: '_blank', 'data-toggle': 'tooltip', title: 'Reddit' },
+                { href: 'https://www.reddit.com/r/SafeCoins/', target: '_blank', 'data-toggle': 'tooltip', title: 'Reddit' },
                 '  ',
                 _react2.default.createElement(_redditAlien2.default, { size: 28 }),
                 '  '
               ),
               _react2.default.createElement(
                 'a',
-                { href: 'https://bitcointalk.org/index.php?topic=2853688.0', target: '_blank', 'data-toggle': 'tooltip', title: 'Bitcoin Talk' },
+                { href: 'https://bitcointalk.org/index.php?topic=2838370', target: '_blank', 'data-toggle': 'tooltip', title: 'Bitcoin Talk' },
                 '  ',
                 _react2.default.createElement(_bitcoin2.default, { size: 28 }),
                 '  '
               ),
               _react2.default.createElement(
                 'a',
-                { href: 'https://github.com/TheTrunk/myzelcash', target: '_blank', 'data-toggle': 'tooltip', title: 'Source Code' },
+                { href: 'https://github.com/OleksandrBlack/mysafecoinwallet', target: '_blank', 'data-toggle': 'tooltip', title: 'Source Code' },
                 '  ',
                 _react2.default.createElement(_github2.default, { size: 28 }),
                 ' '
               ),
               _react2.default.createElement(
                 'a',
-                { href: 'mailto:info@zel.cash', target: '_blank', 'data-toggle': 'tooltip', title: 'info@zel.cash' },
+                { href: 'mailto:fair-exchange@protonmail.com', target: '_blank', 'data-toggle': 'tooltip', title: 'info@zel.cash' },
                 '  ',
                 _react2.default.createElement(_envelopeO2.default, { size: 28 }),
                 '  '
@@ -31673,8 +31673,8 @@ var ZGuide = function (_React$Component) {
                 ' ',
                 _react2.default.createElement(
                   'a',
-                  { href: 'https://my.zel.cash' },
-                  'https://my.zel.cash'
+                  { href: 'https://WALLET.SAFECOIN.ORG' },
+                  'https://WALLET.SAFECOIN.ORG'
                 )
               ),
               _react2.default.createElement(
@@ -31765,8 +31765,8 @@ var ZGuide = function (_React$Component) {
                 ' ',
                 _react2.default.createElement(
                   'a',
-                  { href: 'https://my.zel.cash' },
-                  'https://my.zel.cash'
+                  { href: 'https://WALLET.SAFECOIN.ORG' },
+                  'https://WALLET.SAFECOIN.ORG'
                 ),
                 ' ',
                 _react2.default.createElement(
