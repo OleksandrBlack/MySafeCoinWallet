@@ -1,8 +1,8 @@
-# myzelcash wallet
+# mysafecoin wallet
 
-MyZelcash is a client-side browser-based wallet for Zelcash.
+MySafeCoin Wallet is a client-side browser-based wallet for SafeCoin.
 
-Officially avaiable at: https://my.zel.cash
+Officially avaiable at: https://wallet.safecoin.org
 
 
 # Running locally

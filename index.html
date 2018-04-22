@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.ico">
-    <title>MyZelcash Wallet</title>
+    <title>MySafeCoin Wallet</title>
     <style>
         body {
             display: flex;
@@ -54,7 +54,7 @@
 }
 /*Translations*/
 .footer2{
-    background: #182237;
+    background: #005B54;
     float:right;
     position:relative;
 }
@@ -104,13 +104,13 @@ text-decoration: none;
     </script>
     <script>
         $(window).load(function () {
-            if (readCookie('myzelcash') == null) {
+            if (readCookie('mysafecoin') == null) {
                 $('#preloader').delay(3000).fadeOut('slow');}
-            createCookie('myzelcash',1,300);
+            createCookie('mysafecoin',1,300);
         });
     </script>
     <script>
-    if (readCookie('myzelcash') != null) {
+    if (readCookie('mysafecoin') != null) {
         document.write("<style>.preloader {display:none;}</style>");
     }
     </script>
