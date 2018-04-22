@@ -51256,7 +51256,7 @@ var ZSendSAFE = function (_React$Component6) {
         errString += '`From Address` field can\'t be empty.;';
       }
 
-      if (recipientAddress.length !== 35) {
+      if (recipientAddress.length !== 34) {
         errString += 'Invalid address. Only transparent addresses are supported at this point in time.;';
       }
 
