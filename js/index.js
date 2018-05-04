@@ -38723,14 +38723,14 @@ module.exports = {
     mainnet: {
         messagePrefix: 'safecoin mainnet',
         bip32: {
-            public: '0488b21f',
-            private: '0488ade5'
+            public: '0488B21F',
+            private: '0488ADE5'
         },
-        pubKeyHash: '3d',
+        pubKeyHash: '3D',
         scriptHash: '56',
-        zcPaymentAddressHash: '159a',
-        zcSpendingKeyHash: 'ab36',
-        wif: 'bd'
+        zcPaymentAddressHash: '159A',
+        zcSpendingKeyHash: 'AB36',
+        wif: 'BD'
     },
     testnet: {
         messagePrefix: 'safecoin testnet',
