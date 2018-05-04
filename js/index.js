@@ -38138,7 +38138,7 @@ var ZFooter = function (_React$Component) {
                     _react2.default.createElement(
                       'b',
                       null,
-                      ' MY.ZEL.CASH'
+                      ' WALLET.SAFECOIN.ORG'
                     )
                   ),
                   _react2.default.createElement(
@@ -38146,22 +38146,43 @@ var ZFooter = function (_React$Component) {
                     { className: 'f2' },
                     'Keys are validated client-side and do not leave your browser or network. You are responsible for keeping your own keys safe!!!'
                   ),
-                  _react2.default.createElement(
+                  //_react2.default.createElement(
+                  //  'p',
+                  //  null,
+                  //  _react2.default.createElement(
+                  //    'span',
+                  //    { className: 'f3' },
+                  //    'All donations goes directly to charity!'
+                  //  ),
+                  //  _react2.default.createElement(
+                  //    'a',
+                  //    { href: 'https://www.zel.cash/charity/', target: '_blank', 'data-toggle': 'tooltip', title: 'SafeCoin Charity' },
+                  //    ' ',
+                  //   _react2.default.createElement(
+                  //      'span',
+                  //      { className: 'f4' },
+                  //      'More about safecoin charity'
+                  //    )
+                  //  ),
+                  //  _react2.default.createElement('br', null),
+                  //  _react2.default.createElement('br', null)
+                  //)
+					_react2.default.createElement(
                     'p',
                     null,
                     _react2.default.createElement(
                       'span',
-                      { className: 'f3' },
-                      'All donations goes directly to charity!'
+                      { className: 'f5' },
+                      'Express your gratitude for the wallet!'
                     ),
                     _react2.default.createElement(
                       'a',
-                      { href: 'https://www.zel.cash/charity/', target: '_blank', 'data-toggle': 'tooltip', title: 'Zelcash Charity' },
+                      { href: 'https://safe.lucky-mining.com.ua', target: '_blank', 'data-toggle': 'tooltip', title: 'Lucky-Mining pool' },
                       ' ',
-                      _react2.default.createElement(
+                     _react2.default.createElement(
                         'span',
-                        { className: 'f4' },
-                        'More about Zelcash charity'
+                        { className: 'f6' },
+                        'Go to the Lucky-Mining pool.'
                       )
                     ),
                     _react2.default.createElement('br', null),
@@ -38171,49 +38192,49 @@ var ZFooter = function (_React$Component) {
               ),
               _react2.default.createElement(
                 'a',
-                { href: 'https://zel.cash', target: '_blank', 'data-toggle': 'tooltip', title: 'Website' },
+                { href: 'https://safecoin.org', target: '_blank', 'data-toggle': 'tooltip', title: 'Website' },
                 '  ',
                 _react2.default.createElement(_home2.default, { size: 28 }),
                 '  '
               ),
               _react2.default.createElement(
                 'a',
-                { href: 'https://discord.gg/tTpj2Wm', target: '_blank', 'data-toggle': 'tooltip', title: 'Discord' },
+                { href: 'https://discord.gg/wvteEF3', target: '_blank', 'data-toggle': 'tooltip', title: 'Discord' },
                 '  ',
                 _react2.default.createElement(_comments2.default, { size: 28 }),
                 '  '
               ),
               _react2.default.createElement(
                 'a',
-                { href: 'https://twitter.com/Zelcash', target: '_blank', 'data-toggle': 'tooltip', title: 'Twitter' },
+                { href: 'https://twitter.com/safecoins', target: '_blank', 'data-toggle': 'tooltip', title: 'Twitter' },
                 '  ',
                 _react2.default.createElement(_twitter2.default, { size: 28 }),
                 '  '
               ),
               _react2.default.createElement(
                 'a',
-                { href: 'https://reddit.com/r/ZelCash', target: '_blank', 'data-toggle': 'tooltip', title: 'Reddit' },
+                { href: 'https://www.reddit.com/r/SafeCoins/', target: '_blank', 'data-toggle': 'tooltip', title: 'Reddit' },
                 '  ',
                 _react2.default.createElement(_redditAlien2.default, { size: 28 }),
                 '  '
               ),
               _react2.default.createElement(
                 'a',
-                { href: 'https://bitcointalk.org/index.php?topic=2853688.0', target: '_blank', 'data-toggle': 'tooltip', title: 'Bitcoin Talk' },
+                { href: 'https://bitcointalk.org/index.php?topic=2838370', target: '_blank', 'data-toggle': 'tooltip', title: 'Bitcoin Talk' },
                 '  ',
                 _react2.default.createElement(_bitcoin2.default, { size: 28 }),
                 '  '
               ),
               _react2.default.createElement(
                 'a',
-                { href: 'https://github.com/TheTrunk/myzelcash', target: '_blank', 'data-toggle': 'tooltip', title: 'Source Code' },
+                { href: 'https://github.com/OleksandrBlack/mysafecoinwallet', target: '_blank', 'data-toggle': 'tooltip', title: 'Source Code' },
                 '  ',
                 _react2.default.createElement(_github2.default, { size: 28 }),
                 ' '
               ),
               _react2.default.createElement(
                 'a',
-                { href: 'mailto:info@zel.cash', target: '_blank', 'data-toggle': 'tooltip', title: 'info@zel.cash' },
+                { href: 'mailto:fair-exchange@protonmail.com', target: '_blank', 'data-toggle': 'tooltip', title: 'info@zel.cash' },
                 '  ',
                 _react2.default.createElement(_envelopeO2.default, { size: 28 }),
                 '  '
@@ -50248,9 +50269,9 @@ var _reactTable = __webpack_require__(382);
 
 var _reactTable2 = _interopRequireDefault(_reactTable);
 
-var _komodojs = __webpack_require__(299);
+var _safecoinjs = __webpack_require__(299);
 
-var _komodojs2 = _interopRequireDefault(_komodojs);
+var _safecoinjs2 = _interopRequireDefault(_safecoinjs);
 
 var _utils = __webpack_require__(499);
 
@@ -50380,10 +50401,10 @@ var ZWalletGenerator = function (_React$Component2) {
     key: 'handlePasswordPhrase',
     value: function handlePasswordPhrase(e) {
       // What wif format do we use?
-      var wifHash = this.props.settings.useTestNet ? _komodojs2.default.config.testnet.wif : _komodojs2.default.config.mainnet.wif;
+      var wifHash = this.props.settings.useTestNet ? _safecoinjs2.default.config.testnet.wif : _safecoinjs2.default.config.mainnet.wif;
 
-      var pk = _komodojs2.default.address.mkPrivKey(e.target.value);
-      var pkwif = _komodojs2.default.address.privKeyToWIF(pk, true, wifHash);
+      var pk = _safecoinjs2.default.address.mkPrivKey(e.target.value);
+      var pkwif = _safecoinjs2.default.address.privKeyToWIF(pk, true, wifHash);
 
       if (e.target.value === '') {
         pkwif = '';
@@ -51137,13 +51158,13 @@ var ZAddressInfo = function (_React$Component5) {
   return ZAddressInfo;
 }(_react2.default.Component);
 
-var ZSendKMD = function (_React$Component6) {
-  _inherits(ZSendKMD, _React$Component6);
+var ZSendSAFE = function (_React$Component6) {
+  _inherits(ZSendSAFE, _React$Component6);
 
-  function ZSendKMD(props) {
-    _classCallCheck(this, ZSendKMD);
+  function ZSendSAFE(props) {
+    _classCallCheck(this, ZSendSAFE);
 
-    var _this10 = _possibleConstructorReturn(this, (ZSendKMD.__proto__ || Object.getPrototypeOf(ZSendKMD)).call(this, props));
+    var _this10 = _possibleConstructorReturn(this, (ZSendSAFE.__proto__ || Object.getPrototypeOf(ZSendSAFE)).call(this, props));
 
     _this10.setProgressValue = _this10.setProgressValue.bind(_this10);
     _this10.setSendErrorMessage = _this10.setSendErrorMessage.bind(_this10);
@@ -51152,7 +51173,7 @@ var ZSendKMD = function (_React$Component6) {
     _this10.handleUpdateAmount = _this10.handleUpdateAmount.bind(_this10);
     _this10.handleCheckChanged = _this10.handleCheckChanged.bind(_this10);
     _this10.handleUpdateFee = _this10.handleUpdateFee.bind(_this10);
-    _this10.handleSendKMD = _this10.handleSendKMD.bind(_this10);
+    _this10.handleSendSAFE = _this10.handleSendSAFE.bind(_this10);
 
     _this10.state = {
       selectedAddress: '', // which address did we select
@@ -51167,7 +51188,7 @@ var ZSendKMD = function (_React$Component6) {
     return _this10;
   }
 
-  _createClass(ZSendKMD, [{
+  _createClass(ZSendSAFE, [{
     key: 'handleUpdateSelectedAddress',
     value: function handleUpdateSelectedAddress(e) {
       this.setState({
@@ -51217,8 +51238,8 @@ var ZSendKMD = function (_React$Component6) {
       });
     }
   }, {
-    key: 'handleSendKMD',
-    value: function handleSendKMD() {
+    key: 'handleSendSAFE',
+    value: function handleSendSAFE() {
       var value = this.state.amount;
       var fee = this.state.fee;
       var recipientAddress = this.state.recipientAddress;
@@ -51311,7 +51332,7 @@ var ZSendKMD = function (_React$Component6) {
           // If we don't have enough address
           // fail and tell user
           if (satoshisSoFar < satoshisToSend + satoshisfeesToSend) {
-            this.setSendErrorMessage('Not enough confirmed KMD in account to perform transaction');
+            this.setSendErrorMessage('Not enough confirmed SAFE in account to perform transaction');
             this.setProgressValue(0);
           }
 
@@ -51323,15 +51344,15 @@ var ZSendKMD = function (_React$Component6) {
           }
 
           // Create transaction
-          var txObj = _komodojs2.default.transaction.createRawTx(history, recipients);
+          var txObj = _safecoinjs2.default.transaction.createRawTx(history, recipients);
 
           // Sign each history transcation          
           for (var i = 0; i < history.length; i++) {
-            txObj = _komodojs2.default.transaction.signTx(txObj, i, senderPrivateKey, this.props.settings.compressPubKey);
+            txObj = _safecoinjs2.default.transaction.signTx(txObj, i, senderPrivateKey, this.props.settings.compressPubKey);
           }
 
           // Convert it to hex string
-          var txHexString = _komodojs2.default.transaction.serializeTx(txObj);
+          var txHexString = _safecoinjs2.default.transaction.serializeTx(txObj);
 
           _axios2.default.post(sendRawTxURL, { rawtx: txHexString }).then(function (sendtx_resp) {
             this.setState({
@@ -51354,10 +51375,10 @@ var ZSendKMD = function (_React$Component6) {
     key: 'render',
     value: function render() {
       // If send was successful
-      var komodoTxLink;
+      var safecoinTxLink;
       if (this.state.sendProgress === 100) {
-        var komodotx = _utils2.default.urlAppend(this.props.settings.explorerURL, 'tx/') + this.state.sentTxid;
-        komodoTxLink = _react2.default.createElement(
+        var safecointx = _utils2.default.urlAppend(this.props.settings.explorerURL, 'tx/') + this.state.sentTxid;
+        safecoinTxLink = _react2.default.createElement(
           _reactstrap.Alert,
           { color: 'success' },
           _react2.default.createElement(
@@ -51366,13 +51387,13 @@ var ZSendKMD = function (_React$Component6) {
             _react2.default.createElement(
               'span',
               { className: 'send1' },
-              'KMD successfully sent!'
+              'SAFE successfully sent!'
             )
           ),
           ' ',
           _react2.default.createElement(
             'a',
-            { href: komodotx },
+            { href: safecointx },
             _react2.default.createElement(
               'span',
               { className: 'send2' },
@@ -51384,7 +51405,7 @@ var ZSendKMD = function (_React$Component6) {
 
       // Else show error why
       else if (this.state.sendErrorMessage !== '') {
-          komodoTxLink = this.state.sendErrorMessage.split(';').map(function (s) {
+          safecoinTxLink = this.state.sendErrorMessage.split(';').map(function (s) {
             if (s !== '') {
               return _react2.default.createElement(
                 _reactstrap.Alert,
@@ -51439,7 +51460,7 @@ var ZSendKMD = function (_React$Component6) {
                 _react2.default.createElement(
                   'span',
                   { className: 'send3' },
-                  'ALWAYS VALIDATE YOUR DESINATION ADDRESS BY SENDING SMALL AMOUNTS OF KMD FIRST'
+                  'ALWAYS VALIDATE YOUR DESINATION ADDRESS BY SENDING SMALL AMOUNTS OF SAFE FIRST'
                 )
               ),
               _react2.default.createElement(
@@ -51515,7 +51536,7 @@ var ZSendKMD = function (_React$Component6) {
                   _react2.default.createElement(
                     'span',
                     { className: 'send8' },
-                    'Yes, I would like to send these KMD'
+                    'Yes, I would like to send these SAFE'
                   )
                 )
               ),
@@ -51525,7 +51546,7 @@ var ZSendKMD = function (_React$Component6) {
                 {
                   color: 'warning', className: 'btn-block',
                   disabled: !this.state.confirmSend || this.state.sendProgress > 0 && this.state.sendProgress < 100,
-                  onClick: this.handleSendKMD
+                  onClick: this.handleSendSAFE
                 },
                 _react2.default.createElement(
                   'span',
@@ -51537,7 +51558,7 @@ var ZSendKMD = function (_React$Component6) {
             _react2.default.createElement(
               _reactstrap.CardFooter,
               null,
-              komodoTxLink,
+              safecoinTxLink,
               _react2.default.createElement(_reactstrap.Progress, { value: this.state.sendProgress })
             )
           )
@@ -51546,7 +51567,7 @@ var ZSendKMD = function (_React$Component6) {
     }
   }]);
 
-  return ZSendKMD;
+  return ZSendSAFE;
 }(_react2.default.Component);
 
 var ZWalletSelectUnlockType = function (_React$Component7) {
@@ -51803,7 +51824,7 @@ var ZWalletTabs = function (_React$Component9) {
               _react2.default.createElement(
                 'span',
                 { className: 'menu2' },
-                'Send KMD'
+                'Send SAFE'
               )
             )
           ),
@@ -51841,7 +51862,7 @@ var ZWalletTabs = function (_React$Component9) {
           _react2.default.createElement(
             _reactstrap.TabPane,
             { tabId: '2' },
-            _react2.default.createElement(ZSendKMD, {
+            _react2.default.createElement(ZSendSAFE, {
               settings: this.props.settings,
               publicAddresses: this.props.publicAddresses
             })
@@ -51926,8 +51947,8 @@ var ZWallet = function (_React$Component10) {
         showSettings: false,
         showWalletGen: false,
         compressPubKey: true,
-        insightAPI: 'https://kmd.explorer.supernet.org/api',
-        explorerURL: 'https://kmd.explorer.supernet.org/',
+        insightAPI: 'https://explorer.safecoin.org/api',
+        explorerURL: 'https://explorer.safecoin.org/',
         useTestNet: false,
         unlockType: UNLOCK_WALLET_TYPE.HD_WALLET
       }
@@ -51946,15 +51967,15 @@ var ZWallet = function (_React$Component10) {
         var _privKeyToAddr = function _privKeyToAddr(pk, compressPubKey, useTestNet) {
           // If not 64 length, probs WIF format
           if (pk.length !== 64) {
-            pk = _komodojs2.default.address.WIFToPrivKey(pk);
+            pk = _safecoinjs2.default.address.WIFToPrivKey(pk);
           }
 
           // Convert public key to public address
-          var pubKey = _komodojs2.default.address.privKeyToPubKey(pk, compressPubKey);
+          var pubKey = _safecoinjs2.default.address.privKeyToPubKey(pk, compressPubKey);
 
           // Testnet or nah
-          var pubKeyHash = useTestNet ? _komodojs2.default.config.testnet.pubKeyHash : _komodojs2.default.config.mainnet.pubKeyHash;
-          var publicAddr = _komodojs2.default.address.pubKeyToAddr(pubKey, pubKeyHash);
+          var pubKeyHash = useTestNet ? _safecoinjs2.default.config.testnet.pubKeyHash : _safecoinjs2.default.config.mainnet.pubKeyHash;
+          var publicAddr = _safecoinjs2.default.address.pubKeyToAddr(pubKey, pubKeyHash);
 
           return publicAddr;
         };
@@ -51962,7 +51983,7 @@ var ZWallet = function (_React$Component10) {
         var publicAddresses = {};
 
         for (var i = 0; i < this.state.privateKeys.length; i++) {
-          var pubKeyHash = this.state.settings.useTestNet ? _komodojs2.default.config.testnet.wif : _komodojs2.default.config.mainnet.wif;
+          var pubKeyHash = this.state.settings.useTestNet ? _safecoinjs2.default.config.testnet.wif : _safecoinjs2.default.config.mainnet.wif;
 
           var c_pk_wif;
           var c_pk = this.state.privateKeys[i];
@@ -51970,12 +51991,12 @@ var ZWallet = function (_React$Component10) {
           // If not 64 length, probs WIF format
           if (c_pk.length !== 64) {
             c_pk_wif = c_pk;
-            c_pk = _komodojs2.default.address.WIFToPrivKey(c_pk);
+            c_pk = _safecoinjs2.default.address.WIFToPrivKey(c_pk);
           } else {
-            c_pk_wif = _komodojs2.default.address.privKeyToWIF(c_pk);
+            c_pk_wif = _safecoinjs2.default.address.privKeyToWIF(c_pk);
           }
 
-          var c_pk_wif = _komodojs2.default.address.privKeyToWIF(c_pk, true, pubKeyHash);
+          var c_pk_wif = _safecoinjs2.default.address.privKeyToWIF(c_pk, true, pubKeyHash);
           var c_addr = _privKeyToAddr(c_pk, this.state.settings.compressPubKey, this.state.settings.useTestNet);
 
           publicAddresses[c_addr] = {
@@ -52072,11 +52093,11 @@ var ZWallet = function (_React$Component10) {
       _settings.useTestNet = !_settings.useTestNet;
 
       if (_settings.useTestNet) {
-        _settings.insightAPI = 'https://testnet.zel.cash/api';
-        _settings.explorerURL = 'https://testnet.zel.cash/';
+        _settings.insightAPI = 'https://testnet.safecoin.org/api';
+        _settings.explorerURL = 'https://testnet.safecoin.org/';
       } else {
-        _settings.insightAPI = 'https://kmd.explorer.supernet.org/api';
-        _settings.explorerURL = 'https://kmd.explorer.supernet.org/';
+        _settings.insightAPI = 'https://explorer.safecoin.org/api';
+        _settings.explorerURL = 'https://explorer.safecoin.org/';
       }
 
       this.setState({
@@ -63531,7 +63552,7 @@ module.exports = Signature;
 /* 435 */
 /***/ (function(module, exports) {
 
-module.exports = {"_args":[["bigi@1.4.2","C:\\Users\\Tadeas\\Source\\Repos\\mysafecoin"]],"_from":"bigi@1.4.2","_id":"bigi@1.4.2","_inBundle":false,"_integrity":"sha1-nGZalfiLiwj8Bc/XMfVhhZ1yWCU=","_location":"/bigi","_phantomChildren":{},"_requested":{"type":"version","registry":true,"raw":"bigi@1.4.2","name":"bigi","escapedName":"bigi","rawSpec":"1.4.2","saveSpec":null,"fetchSpec":"1.4.2"},"_requiredBy":["/bitcoinjs-lib","/ecurve","/komodojs"],"_resolved":"https://registry.npmjs.org/bigi/-/bigi-1.4.2.tgz","_spec":"1.4.2","_where":"C:\\Users\\Tadeas\\Source\\Repos\\mysafecoin","bugs":{"url":"https://github.com/cryptocoinjs/bigi/issues"},"dependencies":{},"description":"Big integers.","devDependencies":{"coveralls":"^2.11.2","istanbul":"^0.3.5","jshint":"^2.5.1","mocha":"^2.1.0","mochify":"^2.1.0"},"homepage":"https://github.com/cryptocoinjs/bigi#readme","keywords":["cryptography","math","bitcoin","arbitrary","precision","arithmetic","big","integer","int","number","biginteger","bigint","bignumber","decimal","float"],"main":"./lib/index.js","name":"bigi","repository":{"url":"git+https://github.com/cryptocoinjs/bigi.git","type":"git"},"scripts":{"browser-test":"mochify --wd -R spec","coverage":"istanbul cover ./node_modules/.bin/_mocha -- --reporter list test/*.js","coveralls":"npm run-script coverage && node ./node_modules/.bin/coveralls < coverage/lcov.info","jshint":"jshint --config jshint.json lib/*.js ; true","test":"_mocha -- test/*.js","unit":"mocha"},"testling":{"files":"test/*.js","harness":"mocha","browsers":["ie/9..latest","firefox/latest","chrome/latest","safari/6.0..latest","iphone/6.0..latest","android-browser/4.2..latest"]},"version":"1.4.2"}
+module.exports = {"_args":[["bigi@1.4.2","C:\\Users\\Tadeas\\Source\\Repos\\mysafecoin"]],"_from":"bigi@1.4.2","_id":"bigi@1.4.2","_inBundle":false,"_integrity":"sha1-nGZalfiLiwj8Bc/XMfVhhZ1yWCU=","_location":"/bigi","_phantomChildren":{},"_requested":{"type":"version","registry":true,"raw":"bigi@1.4.2","name":"bigi","escapedName":"bigi","rawSpec":"1.4.2","saveSpec":null,"fetchSpec":"1.4.2"},"_requiredBy":["/bitcoinjs-lib","/ecurve","/safecoinjs"],"_resolved":"https://registry.npmjs.org/bigi/-/bigi-1.4.2.tgz","_spec":"1.4.2","_where":"C:\\Users\\Tadeas\\Source\\Repos\\mysafecoin","bugs":{"url":"https://github.com/cryptocoinjs/bigi/issues"},"dependencies":{},"description":"Big integers.","devDependencies":{"coveralls":"^2.11.2","istanbul":"^0.3.5","jshint":"^2.5.1","mocha":"^2.1.0","mochify":"^2.1.0"},"homepage":"https://github.com/cryptocoinjs/bigi#readme","keywords":["cryptography","math","bitcoin","arbitrary","precision","arithmetic","big","integer","int","number","biginteger","bigint","bignumber","decimal","float"],"main":"./lib/index.js","name":"bigi","repository":{"url":"git+https://github.com/cryptocoinjs/bigi.git","type":"git"},"scripts":{"browser-test":"mochify --wd -R spec","coverage":"istanbul cover ./node_modules/.bin/_mocha -- --reporter list test/*.js","coveralls":"npm run-script coverage && node ./node_modules/.bin/coveralls < coverage/lcov.info","jshint":"jshint --config jshint.json lib/*.js ; true","test":"_mocha -- test/*.js","unit":"mocha"},"testling":{"files":"test/*.js","harness":"mocha","browsers":["ie/9..latest","firefox/latest","chrome/latest","safari/6.0..latest","iphone/6.0..latest","android-browser/4.2..latest"]},"version":"1.4.2"}
 
 /***/ }),
 /* 436 */
@@ -74343,7 +74364,7 @@ var Uint64BE, Int64BE, Uint64LE, Int64LE;
 
 module.exports = {
   /* SIGHASH Codes
-   * Obtained from: https://github.com/Scribbles-MCAMK/Zelcash/blob/master/src/script/interpreter.h
+   * Obtained from: https://github.com/Fair-Exchange/safecoin/blob/master/src/script/interpreter.h
    */
   SIGHASH_ALL: 1,
   SIGHASH_NONE: 2,
@@ -74357,7 +74378,7 @@ module.exports = {
 
 
 /* Useful OP codes for the scripting language
- * Obtained from: https://github.com/Scribbles-MCAMK/Zelcash/blob/master/src/script/script.h
+ * Obtained from: https://github.com/Fair-Exchange/safecoin/blob/master/src/script/script.h
  */
 
 module.exports = {
@@ -80057,7 +80078,7 @@ module.exports = ret;
 
 var bitcoinjs = __webpack_require__(336);
 var bip32utils = __webpack_require__(528);
-var komodojs = __webpack_require__(299);
+var safecoinjs = __webpack_require__(299);
 var bs58check = __webpack_require__(110);
 
 // Hierarchical Deterministic wallet
