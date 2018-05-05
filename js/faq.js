@@ -31742,6 +31742,18 @@ var ZFaq = function (_React$Component) {
               ' ',
               _react2.default.createElement(
                 'span',
+                { className: 'faqst' },
+                'and a special thanks to'
+              ),
+              ' ',
+              _react2.default.createElement(
+                'a',
+                { href: 'https://github.com/TheTrunk' },
+                'TheTrunk'
+              ),
+              '. ',
+              _react2.default.createElement(
+                'span',
                 { className: 'faq4f' },
                 'We also want to provide the people the ability to interact with the SafeCoin blockchain easily, without having to run a full node.'
               )
