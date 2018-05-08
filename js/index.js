@@ -51279,6 +51279,11 @@ var ZSendSAFE = function (_React$Component6) {
         errString += 'Invalid fee.;';
       }
 
+      // Can't send 0 fee
+      if (Number(fee) < Number(".00005")) {
+        errString += 'Fee must be at least 0.00005;';
+      }
+
       if (errString !== '') {
         this.setSendErrorMessage(errString);
         this.setProgressValue(0);
@@ -51522,7 +51527,7 @@ var ZSendSAFE = function (_React$Component6) {
                     'Fee'
                   )
                 ),
-                _react2.default.createElement(_reactstrap.Input, { onChange: this.handleUpdateFee, placeholder: 'e.g 0.00001' })
+                _react2.default.createElement(_reactstrap.Input, { onChange: this.handleUpdateFee, placeholder: 'min 0.00005' })
               ),
               _react2.default.createElement('br', null),
               _react2.default.createElement(
@@ -82466,6 +82471,11 @@ TransactionBuilder.prototype.__build = function (allowIncomplete) {
     if (this.__overMaximumFees(tx.virtualSize())) {
       throw new Error('Transaction has absurd fees')
     }
+
+    // do not rely on this, its merely a last resort
+    if (this.__underMinimumFees(tx.virtualSize())) {
+      throw new Error('Transaction fees minimum is 0.00005')
+    }
   }
 
   return tx
@@ -82590,6 +82600,21 @@ TransactionBuilder.prototype.__overMaximumFees = function (bytes) {
   var feeRate = fee / bytes
 
   return feeRate > this.maximumFeeRate
+}
+
+
+
+TransactionBuilder.prototype.__underMinimumFees = function (bytes) {
+  // not all inputs will have .value defined
+  var incoming = this.inputs.reduce(function (a, x) { return a + (x.value >>> 0) }, 0)
+
+  // but all outputs do, and if we have any input value
+  // we can immediately determine if the outputs are too small
+  var outgoing = this.tx.outs.reduce(function (a, x) { return a + x.value }, 0)
+  var fee = incoming - outgoing
+  var feeRate = fee / bytes
+
+  return fee < .00005
 }
 
 module.exports = TransactionBuilder
