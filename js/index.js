@@ -51285,7 +51285,7 @@ var ZSendSAFE = function (_React$Component6) {
       // Get previous transactions
       var prevTxURL = _utils2.default.urlAppend(this.props.settings.insightAPI, 'addr/') + senderAddress + '/utxo';
       var infoURL = _utils2.default.urlAppend(this.props.settings.insightAPI, 'status?q=getInfo');
-      var sendURL = _utils2.default.urlAppend(this.props.settings.insightAPI, 'tx/send');
+      var sendRawTxURL = _utils2.default.urlAppend(this.props.settings.insightAPI, 'tx/send');
 
       // Building our transaction TXOBJ
       // How many satoshis do we have so far
