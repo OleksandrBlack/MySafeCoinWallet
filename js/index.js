@@ -51280,7 +51280,7 @@ var ZSendSAFE = function (_React$Component6) {
       }
 
       // Can't send 0 fee
-      if (parseInt(fee) < .00005) {
+      if (Number(fee) < Number(".00005")) {
         errString += 'Fee must be at least 0.00005;';
       }
 
