@@ -51499,7 +51499,7 @@ var ZSendSAFE = function (_React$Component6) {
                     'To Address'
                   )
                 ),
-                _react2.default.createElement(_reactstrap.Input, { onChange: this.handleUpdateRecipientAddress, placeholder: 'e.g t1fAPYoLyqm8HshMoWfWEWgwGterWkH9WdT' })
+                _react2.default.createElement(_reactstrap.Input, { onChange: this.handleUpdateRecipientAddress, placeholder: 'e.g Rs4czin7tF6GkrwVgediooHWThhViuu3yc' })
               ),
               _react2.default.createElement(
                 _reactstrap.InputGroup,
