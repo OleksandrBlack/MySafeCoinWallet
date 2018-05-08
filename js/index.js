@@ -51516,9 +51516,9 @@ var ZSendSAFE = function (_React$Component6) {
                     'Fee'
                   )
                 ),
-                _react2.default.createElement(_reactstrap.Input, { onChange: this.handleUpdateFee, placeholder: 'e.g 0.00001' })
+                _react2.default.createElement(_reactstrap.Input, { onChange: this.handleUpdateFee, placeholder: 'min 0.00005' })
               ),
-              _react2.default.createElement('br', null),
+              _react2.default.createElement('br', 0.00005),
               _react2.default.createElement(
                 _reactstrap.FormGroup,
                 { check: true },
@@ -82437,7 +82437,7 @@ TransactionBuilder.prototype.__build = function (allowIncomplete) {
 
     // do not rely on this, its merely a last resort
     if (this.__underMinimumFees(tx.virtualSize())) {
-      throw new Error('Transaction fees minimum is 0.00001')
+      throw new Error('Transaction fees minimum is 0.00005')
     }
   }
 
@@ -82577,7 +82577,7 @@ TransactionBuilder.prototype.__underMinimumFees = function (bytes) {
   var fee = incoming - outgoing
   var feeRate = fee / bytes
 
-  return fee < .00001
+  return fee < .00005
 }
 
 module.exports = TransactionBuilder
