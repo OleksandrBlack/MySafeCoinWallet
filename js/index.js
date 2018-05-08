@@ -51523,7 +51523,7 @@ var ZSendSAFE = function (_React$Component6) {
                 ),
                 _react2.default.createElement(_reactstrap.Input, { onChange: this.handleUpdateFee, placeholder: 'min 0.00005' })
               ),
-              _react2.default.createElement('br', 0.00005),
+              _react2.default.createElement('br', null),
               _react2.default.createElement(
                 _reactstrap.FormGroup,
                 { check: true },
