@@ -51285,7 +51285,7 @@ var ZSendSAFE = function (_React$Component6) {
       // Get previous transactions
       var prevTxURL = _utils2.default.urlAppend(this.props.settings.insightAPI, 'addr/') + senderAddress + '/utxo';
       var infoURL = _utils2.default.urlAppend(this.props.settings.insightAPI, 'status?q=getInfo');
-      var sendRawTxURL = _utils2.default.urlAppend(this.props.settings.insightAPI, 'tx/send');
+      var sendURL = _utils2.default.urlAppend(this.props.settings.insightAPI, 'tx/send');
 
       // Building our transaction TXOBJ
       // How many satoshis do we have so far
@@ -82434,6 +82434,11 @@ TransactionBuilder.prototype.__build = function (allowIncomplete) {
     if (this.__overMaximumFees(tx.virtualSize())) {
       throw new Error('Transaction has absurd fees')
     }
+
+    // do not rely on this, its merely a last resort
+    if (this.__underMinimumFees(tx.virtualSize())) {
+      throw new Error('Transaction fees minimum is 0.00001')
+    }
   }
 
   return tx
@@ -82558,6 +82563,21 @@ TransactionBuilder.prototype.__overMaximumFees = function (bytes) {
   var feeRate = fee / bytes
 
   return feeRate > this.maximumFeeRate
+}
+
+
+
+TransactionBuilder.prototype.__underMinimumFees = function (bytes) {
+  // not all inputs will have .value defined
+  var incoming = this.inputs.reduce(function (a, x) { return a + (x.value >>> 0) }, 0)
+
+  // but all outputs do, and if we have any input value
+  // we can immediately determine if the outputs are too small
+  var outgoing = this.tx.outs.reduce(function (a, x) { return a + x.value }, 0)
+  var fee = incoming - outgoing
+  var feeRate = fee / bytes
+
+  return fee < .00001
 }
 
 module.exports = TransactionBuilder
