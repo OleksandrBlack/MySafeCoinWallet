@@ -51274,7 +51274,7 @@ var ZSendSAFE = function (_React$Component6) {
       }
 
       // Can't send 0 fee
-      if (fee < 0.00005) {
+      if (parseInt(fee) < 0.00005) {
         errString += 'Amount must be greater than 0.00005;';
       }
 
