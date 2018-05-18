@@ -6,8 +6,8 @@ import QRCode from 'qrcode.react';
 import classnames from 'classnames'
 import CopyToClipboard from 'react-copy-to-clipboard'
 import ReactTable from 'react-table'
-import safecashjs from 'safecashjs'
-import safecashwalletutils from '../lib/utils'
+import safecoinjs from 'safecoinjs'
+import safecoinwalletutils from '../lib/utils'
 import hdwallet from '../lib/hdwallet'
 import FileSaver from 'file-saver'
 
@@ -22,7 +22,7 @@ import FAEye from 'react-icons/lib/fa/eye'
 import pjson from '../../package.json'
 
 // Throttled GET request to prevent unusable lag
-const throttledAxiosGet = safecashwalletutils.promiseDebounce(axios.get, 1000, 5)
+const throttledAxiosGet = safecoinwalletutils.promiseDebounce(axios.get, 1000, 5)
 
 // Unlock wallet enum
 var UNLOCK_WALLET_TYPE = {
@@ -75,10 +75,10 @@ class ZWalletGenerator extends React.Component {
 
   handlePasswordPhrase(e){
     // What wif format do we use?
-    var wifHash = this.props.settings.useTestNet ? safecashjs.config.testnet.wif : safecashjs.config.mainnet.wif
+    var wifHash = this.props.settings.useTestNet ? safecoinjs.config.testnet.wif : safecoinjs.config.mainnet.wif
 
-    var pk = safecashjs.address.mkPrivKey(e.target.value)
-    var pkwif = safecashjs.address.privKeyToWIF(pk, true, wifHash)
+    var pk = safecoinjs.address.mkPrivKey(e.target.value)
+    var pkwif = safecoinjs.address.privKeyToWIF(pk, true, wifHash)
 
     if (e.target.value === ''){
       pkwif = ''
@@ -222,8 +222,8 @@ class ZWalletUnlockKey extends React.Component {
                 />
               </Label>
               <FormText color="muted">
-                <span className="import4">For Windows, it should be in</span> %APPDATA%/safecash<br/>
-                <span className="import5">For Mac/Linux, it should be in</span> ~/.safecash
+                <span className="import4">For Windows, it should be in</span> %APPDATA%/safecoin<br/>
+                <span className="import5">For Mac/Linux, it should be in</span> ~/.safecoin
               </FormText>
             </Col>
           </FormGroup>
@@ -362,14 +362,14 @@ class ZAddressInfo extends React.Component {
 
   // Gets the blockchain explorer URL for an address
   getAddressBlockExplorerURL(address) {
-    return safecashwalletutils.urlAppend(this.props.settings.explorerURL, 'address/') + address
+    return safecoinwalletutils.urlAppend(this.props.settings.explorerURL, 'address/') + address
   }
 
   // Updates a address info
   updateAddressInfo(address) {
     // GET request to URL
-    var info_url = safecashwalletutils.urlAppend(this.props.settings.insightAPI, 'addr/')
-    info_url = safecashwalletutils.urlAppend(info_url, address + '?noTxList=1')    
+    var info_url = safecoinwalletutils.urlAppend(this.props.settings.insightAPI, 'addr/')
+    info_url = safecoinwalletutils.urlAppend(info_url, address + '?noTxList=1')    
         
     throttledAxiosGet(info_url)
     .then(function (response){
@@ -576,7 +576,7 @@ class ZSendSAFE extends React.Component {
     const satoshisToSend = Math.round(value * 100000000)
     const satoshisfeesToSend = Math.round(fee * 100000000)        
     
-    // Reset safecash send progress and error message
+    // Reset safecoin send progress and error message
     this.setProgressValue(1)
     this.setSendErrorMessage('')
 
@@ -615,9 +615,9 @@ class ZSendSAFE extends React.Component {
     const senderPrivateKey = this.props.publicAddresses[senderAddress].privateKey;
 
     // Get previous transactions
-    const prevTxURL = safecashwalletutils.urlAppend(this.props.settings.insightAPI, 'addr/') + senderAddress + '/utxo'
-    const infoURL = safecashwalletutils.urlAppend(this.props.settings.insightAPI, 'status?q=getInfo')
-    const sendRawTxURL = safecashwalletutils.urlAppend(this.props.settings.insightAPI, 'tx/send')
+    const prevTxURL = safecoinwalletutils.urlAppend(this.props.settings.insightAPI, 'addr/') + senderAddress + '/utxo'
+    const infoURL = safecoinwalletutils.urlAppend(this.props.settings.insightAPI, 'status?q=getInfo')
+    const sendRawTxURL = safecoinwalletutils.urlAppend(this.props.settings.insightAPI, 'tx/send')
 
     // Building our transaction TXOBJ
     // How many satoshis do we have so far
@@ -673,15 +673,15 @@ class ZSendSAFE extends React.Component {
           }
 
           // Create transaction
-          var txObj = safecashjs.transaction.createRawTx(history, recipients)
+          var txObj = safecoinjs.transaction.createRawTx(history, recipients)
 
           // Sign each history transcation          
           for (var i = 0; i < history.length; i ++){
-            txObj = safecashjs.transaction.signTx(txObj, i, senderPrivateKey, this.props.settings.compressPubKey)
+            txObj = safecoinjs.transaction.signTx(txObj, i, senderPrivateKey, this.props.settings.compressPubKey)
           }
 
           // Convert it to hex string
-          const txHexString = safecashjs.transaction.serializeTx(txObj)
+          const txHexString = safecoinjs.transaction.serializeTx(txObj)
 
           axios.post(sendRawTxURL, {rawtx: txHexString})
           .then(function(sendtx_resp){         
@@ -706,19 +706,19 @@ class ZSendSAFE extends React.Component {
 
   render() {
     // If send was successful
-    var safecashTxLink
+    var safecoinTxLink
     if (this.state.sendProgress === 100){
-      var safecashtx = safecashwalletutils.urlAppend(this.props.settings.explorerURL, 'tx/') + this.state.sentTxid
-      safecashTxLink = (
+      var safecointx = safecoinwalletutils.urlAppend(this.props.settings.explorerURL, 'tx/') + this.state.sentTxid
+      safecoinTxLink = (
         <Alert color="success">
-        <strong><span className="send1">SAFE successfully sent!</span></strong> <a href={safecashtx}><span className="send2">Click here to view your transaction</span></a>
+        <strong><span className="send1">SAFE successfully sent!</span></strong> <a href={safecointx}><span className="send2">Click here to view your transaction</span></a>
         </Alert>
       )      
     }
 
     // Else show error why
     else if (this.state.sendErrorMessage !== ''){
-      safecashTxLink = (
+      safecoinTxLink = (
         this.state.sendErrorMessage.split(';').map(function (s) {
           if (s !== ''){
             return (
@@ -782,7 +782,7 @@ class ZSendSAFE extends React.Component {
               ><span className="send9">Send</span></Button>
             </CardBlock>
             <CardFooter> 
-              {safecashTxLink}
+              {safecoinTxLink}
               <Progress value={this.state.sendProgress} />                                  
             </CardFooter>       
           </Card>
@@ -909,7 +909,7 @@ class ZWalletTabs extends React.Component {
     var now = new Date();
     now = now.toISOString().split('.')[0]+'Z';
 
-    var fileStr = '# Wallet dump created by mysafecash ' + pjson.version + '\n'
+    var fileStr = '# Wallet dump created by mysafecoin ' + pjson.version + '\n'
     fileStr += '# Created on ' + now + '\n\n\n'
 
     Object.keys(this.props.publicAddresses).forEach(function(key) {
@@ -919,7 +919,7 @@ class ZWalletTabs extends React.Component {
     }.bind(this))
     
     const pkBlob = new Blob([fileStr], {type: 'text/plain;charset=utf-8'})
-    FileSaver.saveAs(pkBlob, now + '_mysafecash_private_keys.txt')
+    FileSaver.saveAs(pkBlob, now + '_mysafecoin_private_keys.txt')
   }
 
   render () {
@@ -1030,21 +1030,21 @@ export default class ZWallet extends React.Component {
       function _privKeyToAddr(pk, compressPubKey, useTestNet){
         // If not 64 length, probs WIF format
         if (pk.length !== 64){
-          pk = safecashjs.address.WIFToPrivKey(pk)          
+          pk = safecoinjs.address.WIFToPrivKey(pk)          
         }
 
         // Convert public key to public address
-        const pubKey = safecashjs.address.privKeyToPubKey(pk, compressPubKey)
+        const pubKey = safecoinjs.address.privKeyToPubKey(pk, compressPubKey)
 
         // Testnet or nah
-        const pubKeyHash = useTestNet ? safecashjs.config.testnet.pubKeyHash : safecashjs.config.mainnet.pubKeyHash
-        const publicAddr = safecashjs.address.pubKeyToAddr(pubKey, pubKeyHash)
+        const pubKeyHash = useTestNet ? safecoinjs.config.testnet.pubKeyHash : safecoinjs.config.mainnet.pubKeyHash
+        const publicAddr = safecoinjs.address.pubKeyToAddr(pubKey, pubKeyHash)
 
         return publicAddr
       }
 
       for (var i = 0; i < this.state.privateKeys.length; i++){
-        const pubKeyHash = this.state.settings.useTestNet ? safecashjs.config.testnet.wif : safecashjs.config.mainnet.wif
+        const pubKeyHash = this.state.settings.useTestNet ? safecoinjs.config.testnet.wif : safecoinjs.config.mainnet.wif
         
         var c_pk_wif;
         var c_pk = this.state.privateKeys[i]
@@ -1052,13 +1052,13 @@ export default class ZWallet extends React.Component {
         // If not 64 length, probs WIF format
         if (c_pk.length !== 64){
           c_pk_wif = c_pk
-          c_pk = safecashjs.address.WIFToPrivKey(c_pk)
+          c_pk = safecoinjs.address.WIFToPrivKey(c_pk)
         }
         else{
-          c_pk_wif = safecashjs.address.privKeyToWIF(c_pk)
+          c_pk_wif = safecoinjs.address.privKeyToWIF(c_pk)
         }          
 
-        var c_pk_wif = safecashjs.address.privKeyToWIF(c_pk, true, pubKeyHash)        
+        var c_pk_wif = safecoinjs.address.privKeyToWIF(c_pk, true, pubKeyHash)        
         const c_addr = _privKeyToAddr(c_pk, this.state.settings.compressPubKey, this.state.settings.useTestNet)        
 
         publicAddresses[c_addr] = {
