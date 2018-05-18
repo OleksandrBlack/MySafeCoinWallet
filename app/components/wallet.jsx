@@ -6,8 +6,8 @@ import QRCode from 'qrcode.react';
 import classnames from 'classnames'
 import CopyToClipboard from 'react-copy-to-clipboard'
 import ReactTable from 'react-table'
-import zelcashjs from 'zelcashjs'
-import zelcashwalletutils from '../lib/utils'
+import safecashjs from 'safecashjs'
+import safecashwalletutils from '../lib/utils'
 import hdwallet from '../lib/hdwallet'
 import FileSaver from 'file-saver'
 
@@ -22,7 +22,7 @@ import FAEye from 'react-icons/lib/fa/eye'
 import pjson from '../../package.json'
 
 // Throttled GET request to prevent unusable lag
-const throttledAxiosGet = zelcashwalletutils.promiseDebounce(axios.get, 1000, 5)
+const throttledAxiosGet = safecashwalletutils.promiseDebounce(axios.get, 1000, 5)
 
 // Unlock wallet enum
 var UNLOCK_WALLET_TYPE = {
@@ -75,10 +75,10 @@ class ZWalletGenerator extends React.Component {
 
   handlePasswordPhrase(e){
     // What wif format do we use?
-    var wifHash = this.props.settings.useTestNet ? zelcashjs.config.testnet.wif : zelcashjs.config.mainnet.wif
+    var wifHash = this.props.settings.useTestNet ? safecashjs.config.testnet.wif : safecashjs.config.mainnet.wif
 
-    var pk = zelcashjs.address.mkPrivKey(e.target.value)
-    var pkwif = zelcashjs.address.privKeyToWIF(pk, true, wifHash)
+    var pk = safecashjs.address.mkPrivKey(e.target.value)
+    var pkwif = safecashjs.address.privKeyToWIF(pk, true, wifHash)
 
     if (e.target.value === ''){
       pkwif = ''
@@ -222,8 +222,8 @@ class ZWalletUnlockKey extends React.Component {
                 />
               </Label>
               <FormText color="muted">
-                <span className="import4">For Windows, it should be in</span> %APPDATA%/zelcash<br/>
-                <span className="import5">For Mac/Linux, it should be in</span> ~/.zelcash
+                <span className="import4">For Windows, it should be in</span> %APPDATA%/safecash<br/>
+                <span className="import5">For Mac/Linux, it should be in</span> ~/.safecash
               </FormText>
             </Col>
           </FormGroup>
@@ -284,7 +284,7 @@ class ZWalletSettings extends React.Component {
   render () {
     return (
       <Modal isOpen={this.props.settings.showSettings} toggle={this.props.toggleModalSettings}>
-        <ModalHeader toggle={this.props.toggleShowSettings}><span className="settings1">Zelcash Wallet Settings</span></ModalHeader>                  
+        <ModalHeader toggle={this.props.toggleShowSettings}><span className="settings1">SafeCoin Wallet Settings</span></ModalHeader>                  
         <ModalBody>
           <ZWalletSelectUnlockType
               setUnlockType={this.props.setUnlockType}
@@ -362,14 +362,14 @@ class ZAddressInfo extends React.Component {
 
   // Gets the blockchain explorer URL for an address
   getAddressBlockExplorerURL(address) {
-    return zelcashwalletutils.urlAppend(this.props.settings.explorerURL, 'address/') + address
+    return safecashwalletutils.urlAppend(this.props.settings.explorerURL, 'address/') + address
   }
 
   // Updates a address info
   updateAddressInfo(address) {
     // GET request to URL
-    var info_url = zelcashwalletutils.urlAppend(this.props.settings.insightAPI, 'addr/')
-    info_url = zelcashwalletutils.urlAppend(info_url, address + '?noTxList=1')    
+    var info_url = safecashwalletutils.urlAppend(this.props.settings.insightAPI, 'addr/')
+    info_url = safecashwalletutils.urlAppend(info_url, address + '?noTxList=1')    
         
     throttledAxiosGet(info_url)
     .then(function (response){
@@ -498,7 +498,7 @@ class ZAddressInfo extends React.Component {
   }
 }
 
-class ZSendZEL extends React.Component {
+class ZSendSAFE extends React.Component {
   constructor(props) {
     super(props)    
     
@@ -509,7 +509,7 @@ class ZSendZEL extends React.Component {
     this.handleUpdateAmount = this.handleUpdateAmount.bind(this);
     this.handleCheckChanged = this.handleCheckChanged.bind(this);
     this.handleUpdateFee = this.handleUpdateFee.bind(this);
-    this.handleSendZEL = this.handleSendZEL.bind(this);    
+    this.handleSendSAFE = this.handleSendSAFE.bind(this);    
 
     this.state = {
       selectedAddress: '', // which address did we select
@@ -565,7 +565,7 @@ class ZSendZEL extends React.Component {
     })
   }
 
-  handleSendZEL(){      
+  handleSendSAFE(){      
     const value = this.state.amount;
     const fee = this.state.fee;
     const recipientAddress = this.state.recipientAddress;
@@ -576,7 +576,7 @@ class ZSendZEL extends React.Component {
     const satoshisToSend = Math.round(value * 100000000)
     const satoshisfeesToSend = Math.round(fee * 100000000)        
     
-    // Reset zelcash send progress and error message
+    // Reset safecash send progress and error message
     this.setProgressValue(1)
     this.setSendErrorMessage('')
 
@@ -588,7 +588,7 @@ class ZSendZEL extends React.Component {
       errString += '`From Address` field can\'t be empty.;'
     }
 
-    if (recipientAddress.length !== 35) {
+    if (recipientAddress.length !== 34) {
       errString += 'Invalid address. Only transparent addresses are supported at this point in time.;'
     }
 
@@ -615,9 +615,9 @@ class ZSendZEL extends React.Component {
     const senderPrivateKey = this.props.publicAddresses[senderAddress].privateKey;
 
     // Get previous transactions
-    const prevTxURL = zelcashwalletutils.urlAppend(this.props.settings.insightAPI, 'addr/') + senderAddress + '/utxo'
-    const infoURL = zelcashwalletutils.urlAppend(this.props.settings.insightAPI, 'status?q=getInfo')
-    const sendRawTxURL = zelcashwalletutils.urlAppend(this.props.settings.insightAPI, 'tx/send')
+    const prevTxURL = safecashwalletutils.urlAppend(this.props.settings.insightAPI, 'addr/') + senderAddress + '/utxo'
+    const infoURL = safecashwalletutils.urlAppend(this.props.settings.insightAPI, 'status?q=getInfo')
+    const sendRawTxURL = safecashwalletutils.urlAppend(this.props.settings.insightAPI, 'tx/send')
 
     // Building our transaction TXOBJ
     // How many satoshis do we have so far
@@ -661,7 +661,7 @@ class ZSendZEL extends React.Component {
           // If we don't have enough address
           // fail and tell user
           if (satoshisSoFar < satoshisToSend + satoshisfeesToSend){            
-            this.setSendErrorMessage('Not enough confirmed ZEL in account to perform transaction')
+            this.setSendErrorMessage('Not enough confirmed SAFE in account to perform transaction')
             this.setProgressValue(0)          
           }
 
@@ -673,15 +673,15 @@ class ZSendZEL extends React.Component {
           }
 
           // Create transaction
-          var txObj = zelcashjs.transaction.createRawTx(history, recipients)
+          var txObj = safecashjs.transaction.createRawTx(history, recipients)
 
           // Sign each history transcation          
           for (var i = 0; i < history.length; i ++){
-            txObj = zelcashjs.transaction.signTx(txObj, i, senderPrivateKey, this.props.settings.compressPubKey)
+            txObj = safecashjs.transaction.signTx(txObj, i, senderPrivateKey, this.props.settings.compressPubKey)
           }
 
           // Convert it to hex string
-          const txHexString = zelcashjs.transaction.serializeTx(txObj)
+          const txHexString = safecashjs.transaction.serializeTx(txObj)
 
           axios.post(sendRawTxURL, {rawtx: txHexString})
           .then(function(sendtx_resp){         
@@ -706,19 +706,19 @@ class ZSendZEL extends React.Component {
 
   render() {
     // If send was successful
-    var zelcashTxLink
+    var safecashTxLink
     if (this.state.sendProgress === 100){
-      var zelcashtx = zelcashwalletutils.urlAppend(this.props.settings.explorerURL, 'tx/') + this.state.sentTxid
-      zelcashTxLink = (
+      var safecashtx = safecashwalletutils.urlAppend(this.props.settings.explorerURL, 'tx/') + this.state.sentTxid
+      safecashTxLink = (
         <Alert color="success">
-        <strong><span className="send1">ZEL successfully sent!</span></strong> <a href={zelcashtx}><span className="send2">Click here to view your transaction</span></a>
+        <strong><span className="send1">SAFE successfully sent!</span></strong> <a href={safecashtx}><span className="send2">Click here to view your transaction</span></a>
         </Alert>
       )      
     }
 
     // Else show error why
     else if (this.state.sendErrorMessage !== ''){
-      zelcashTxLink = (
+      safecashTxLink = (
         this.state.sendErrorMessage.split(';').map(function (s) {
           if (s !== ''){
             return (
@@ -747,7 +747,7 @@ class ZSendZEL extends React.Component {
         <Col>
           <Card>
             <CardBlock>       
-              <Alert color="danger"><span className="send3">ALWAYS VALIDATE YOUR DESINATION ADDRESS BY SENDING SMALL AMOUNTS OF ZEL FIRST</span></Alert>              
+              <Alert color="danger"><span className="send3">ALWAYS VALIDATE YOUR DESINATION ADDRESS BY SENDING SMALL AMOUNTS OF SAFE FIRST</span></Alert>              
               <InputGroup>
                 <InputGroupAddon><span className="send4">From Address</span></InputGroupAddon>
                 <Input type="select" onChange={this.handleUpdateSelectedAddress}>
@@ -771,18 +771,18 @@ class ZSendZEL extends React.Component {
               <FormGroup check>
                 <Label check>
                   <Input onChange={this.handleCheckChanged} type="checkbox" />{' '}
-                  <span className="send8">Yes, I would like to send these ZEL</span>
+                  <span className="send8">Yes, I would like to send these SAFE</span>
                 </Label>
               </FormGroup> 
               <br/>                           
               <Button 
                 color="warning" className="btn-block"
                 disabled={!this.state.confirmSend || (this.state.sendProgress > 0 && this.state.sendProgress < 100)}
-                onClick={this.handleSendZEL}
+                onClick={this.handleSendSAFE}
               ><span className="send9">Send</span></Button>
             </CardBlock>
             <CardFooter> 
-              {zelcashTxLink}
+              {safecashTxLink}
               <Progress value={this.state.sendProgress} />                                  
             </CardFooter>       
           </Card>
@@ -909,7 +909,7 @@ class ZWalletTabs extends React.Component {
     var now = new Date();
     now = now.toISOString().split('.')[0]+'Z';
 
-    var fileStr = '# Wallet dump created by myzelcash ' + pjson.version + '\n'
+    var fileStr = '# Wallet dump created by mysafecash ' + pjson.version + '\n'
     fileStr += '# Created on ' + now + '\n\n\n'
 
     Object.keys(this.props.publicAddresses).forEach(function(key) {
@@ -919,7 +919,7 @@ class ZWalletTabs extends React.Component {
     }.bind(this))
     
     const pkBlob = new Blob([fileStr], {type: 'text/plain;charset=utf-8'})
-    FileSaver.saveAs(pkBlob, now + '_myzelcash_private_keys.txt')
+    FileSaver.saveAs(pkBlob, now + '_mysafecash_private_keys.txt')
   }
 
   render () {
@@ -939,7 +939,7 @@ class ZWalletTabs extends React.Component {
               className={classnames({ active: this.state.activeTab === '2' })}
               onClick={() => { this.toggleTabs('2'); }}
             >
-              <span className="menu2">Send ZEL</span>
+              <span className="menu2">Send SAFE</span>
             </NavLink>
           </NavItem>
           <NavItem>
@@ -960,7 +960,7 @@ class ZWalletTabs extends React.Component {
             />
           </TabPane>
           <TabPane tabId="2">
-            <ZSendZEL 
+            <ZSendSAFE 
               settings={this.props.settings}
               publicAddresses={this.props.publicAddresses}            
             />
@@ -1011,8 +1011,8 @@ export default class ZWallet extends React.Component {
         showSettings: false,
         showWalletGen: false,
         compressPubKey: true,
-        insightAPI: 'https://explorer.zel.cash/api',
-        explorerURL: 'https://explorer.zel.cash/',
+        insightAPI: 'https://explorer.safecoin.org/api',
+        explorerURL: 'https://explorer.safecoin.org/',
         useTestNet: false,
         unlockType: UNLOCK_WALLET_TYPE.HD_WALLET
       }
@@ -1030,21 +1030,21 @@ export default class ZWallet extends React.Component {
       function _privKeyToAddr(pk, compressPubKey, useTestNet){
         // If not 64 length, probs WIF format
         if (pk.length !== 64){
-          pk = zelcashjs.address.WIFToPrivKey(pk)          
+          pk = safecashjs.address.WIFToPrivKey(pk)          
         }
 
         // Convert public key to public address
-        const pubKey = zelcashjs.address.privKeyToPubKey(pk, compressPubKey)
+        const pubKey = safecashjs.address.privKeyToPubKey(pk, compressPubKey)
 
         // Testnet or nah
-        const pubKeyHash = useTestNet ? zelcashjs.config.testnet.pubKeyHash : zelcashjs.config.mainnet.pubKeyHash
-        const publicAddr = zelcashjs.address.pubKeyToAddr(pubKey, pubKeyHash)
+        const pubKeyHash = useTestNet ? safecashjs.config.testnet.pubKeyHash : safecashjs.config.mainnet.pubKeyHash
+        const publicAddr = safecashjs.address.pubKeyToAddr(pubKey, pubKeyHash)
 
         return publicAddr
       }
 
       for (var i = 0; i < this.state.privateKeys.length; i++){
-        const pubKeyHash = this.state.settings.useTestNet ? zelcashjs.config.testnet.wif : zelcashjs.config.mainnet.wif
+        const pubKeyHash = this.state.settings.useTestNet ? safecashjs.config.testnet.wif : safecashjs.config.mainnet.wif
         
         var c_pk_wif;
         var c_pk = this.state.privateKeys[i]
@@ -1052,13 +1052,13 @@ export default class ZWallet extends React.Component {
         // If not 64 length, probs WIF format
         if (c_pk.length !== 64){
           c_pk_wif = c_pk
-          c_pk = zelcashjs.address.WIFToPrivKey(c_pk)
+          c_pk = safecashjs.address.WIFToPrivKey(c_pk)
         }
         else{
-          c_pk_wif = zelcashjs.address.privKeyToWIF(c_pk)
+          c_pk_wif = safecashjs.address.privKeyToWIF(c_pk)
         }          
 
-        var c_pk_wif = zelcashjs.address.privKeyToWIF(c_pk, true, pubKeyHash)        
+        var c_pk_wif = safecashjs.address.privKeyToWIF(c_pk, true, pubKeyHash)        
         const c_addr = _privKeyToAddr(c_pk, this.state.settings.compressPubKey, this.state.settings.useTestNet)        
 
         publicAddresses[c_addr] = {
@@ -1145,12 +1145,12 @@ export default class ZWallet extends React.Component {
     _settings.useTestNet = !_settings.useTestNet
 
     if (_settings.useTestNet){
-        _settings.insightAPI = 'https://testnet.zel.cash/api'
-      _settings.explorerURL = 'https://testnet.zel.cash/'
+        _settings.insightAPI = 'https://testnet.safecoin.org/api'
+      _settings.explorerURL = 'https://testnet.safecoin.org/'
     }
     else{
-        _settings.insightAPI = 'https://explorer.zel.cash/api'
-        _settings.explorerURL = 'https://explorer.zel.cash/'
+        _settings.insightAPI = 'https://explorer.safecoin.org/api'
+        _settings.explorerURL = 'https://explorer.safecoin.org/'
     }
 
     this.setState({
@@ -1181,7 +1181,7 @@ export default class ZWallet extends React.Component {
       <Container>
         <Row>
           <Col>
-            <h1 className='display-6'><span className="main1">MyZelcash Wallet</span>&nbsp;
+            <h1 className='display-6'><span className="main1">MySafeCoin Wallet</span>&nbsp;
               <ToolTipButton onClick={this.toggleShowSettings} id={1} buttonText={<MDSettings/>} tooltipText={'settings'}/>&nbsp;
               <ToolTipButton disabled={this.state.publicAddresses === null} onClick={this.resetKeys} id={2} buttonText={<FARepeat/>} tooltipText={'reset wallet'}/>
             </h1>
