@@ -953,7 +953,7 @@ class ZWalletSelectUnlockType extends React.Component {
           <Button color="secondary" onClick={() => this.onRadioBtnClick(UNLOCK_WALLET_TYPE.HD_WALLET)} active={this.state.cSelected === UNLOCK_WALLET_TYPE.HD_WALLET}><span className="settings6">Enter secret phrase</span></Button>
           <Button color="secondary" onClick={() => this.onRadioBtnClick(UNLOCK_WALLET_TYPE.IMPORT_WALLET)} active={this.state.cSelected === UNLOCK_WALLET_TYPE.IMPORT_WALLET}><span className="settings7">Load wallet.dat</span></Button>        
           <Button color="secondary" onClick={() => this.onRadioBtnClick(UNLOCK_WALLET_TYPE.PASTE_PRIV_KEY)} active={this.state.cSelected === UNLOCK_WALLET_TYPE.PASTE_PRIV_KEY}><span className="settings8">Paste private key</span></Button>
-          <Button color="secondary" onClick={() => this.onRadioBtnClick(UNLOCK_WALLET_TYPE.IMPORT_COPAY)} active={this.state.cSelected === UNLOCK_WALLET_TYPE.IMPORT_COPAY}><span className="settings8">Enter Copay recovery phrase</span></Button>   
+          <Button color="secondary" onClick={() => this.onRadioBtnClick(UNLOCK_WALLET_TYPE.IMPORT_COPAY)} active={this.state.cSelected === UNLOCK_WALLET_TYPE.IMPORT_COPAY}><span className="settings8">Enter Copay recovery phrase (beta)</span></Button>   
         </ButtonGroup>
       </div>
     )
