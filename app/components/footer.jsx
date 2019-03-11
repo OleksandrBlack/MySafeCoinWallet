@@ -28,10 +28,6 @@ export default class ZFooter extends React.Component {
             <p><span className="f1">MAKE SURE YOU ARE ON</span><b> WALLET.SAFECOIN.ORG</b></p>
 
             <p className="f2">Keys are validated client-side and do not leave your browser or network. You are responsible for keeping your own keys safe!!!</p>
-
-            <p><span className="f5">Express your gratitude for the wallet!</span>
-              <a href="https://safe.lucky-mining.com.ua" target="_blank" data-toggle="tooltip" title="Lucky-Mining Pool"> <span className="f6">Go to the Lucky-Mining Pool.</span></a><br/><br/>
-            </p>
 	
           </Col>
               </Row>
