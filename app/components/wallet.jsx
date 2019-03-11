@@ -610,7 +610,7 @@ class ZSendSAFE extends React.Component {
     this.state = {
       selectedAddress: '', // which address did we select
       recipientAddress: '',
-      fee: '',
+      fee: '0.00005',
       amount: '',                        
       sentTxid: '', // Whats the send txid
       sendProgress: 0, // Progress bar, 100 to indicate complete
@@ -701,7 +701,7 @@ class ZSendSAFE extends React.Component {
     if (typeof parseInt(fee) !== 'number' || fee === ''){
       errString += 'Invalid fee.;'
     }
-
+	
     if (errString !== ''){
       this.setSendErrorMessage(errString)
       this.setProgressValue(0)
@@ -895,7 +895,7 @@ class ZSendSAFE extends React.Component {
               </InputGroup>
               <InputGroup>
                 <InputGroupAddon><span className="send5">To Address</span></InputGroupAddon>
-                <Input onChange={this.handleUpdateRecipientAddress} placeholder="e.g t1fAPYoLyqm8HshMoWfWEWgwGterWkH9WdT" />
+                <Input onChange={this.handleUpdateRecipientAddress} placeholder="e.g Rs4czin7tF6GkrwVgediooHWThhViuu3yc" />
               </InputGroup>
               <InputGroup>
                 <InputGroupAddon><span className="send6">Amount</span></InputGroupAddon>
@@ -903,7 +903,7 @@ class ZSendSAFE extends React.Component {
               </InputGroup>
               <InputGroup>
                 <InputGroupAddon><span className="send7">Fee</span></InputGroupAddon>
-                <Input onChange={this.handleUpdateFee} placeholder="e.g 0.00001" />
+                <Input onChange={this.handleUpdateFee} placeholder="min 0.00005" />
               </InputGroup>
               <br/>
               <FormGroup check>
