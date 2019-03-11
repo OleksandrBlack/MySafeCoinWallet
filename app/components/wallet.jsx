@@ -610,7 +610,7 @@ class ZSendSAFE extends React.Component {
     this.state = {
       selectedAddress: '', // which address did we select
       recipientAddress: '',
-      fee: '0.00005',
+      fee: '',
       amount: '',                        
       sentTxid: '', // Whats the send txid
       sendProgress: 0, // Progress bar, 100 to indicate complete
@@ -698,8 +698,9 @@ class ZSendSAFE extends React.Component {
       errString += 'Amount must be greater than 0.;'      
     }
 
-    if (typeof parseInt(fee) !== 'number' || fee === ''){
-      errString += 'Invalid fee.;'
+	// txfee min 0.00005
+    if (typeof parseInt(fee) !== 'number' || fee < 0.00005) {
+      errString += 'Invalid fee. min 0.00005;';
     }
 	
     if (errString !== ''){
