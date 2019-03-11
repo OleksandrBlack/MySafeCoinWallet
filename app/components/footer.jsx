@@ -33,7 +33,7 @@ export default class ZFooter extends React.Component {
               </Row>
 
 <a href="https://safecoin.org" target="_blank" data-toggle="tooltip" title="Website">  <FAHome size={28}/>  </a>
-<a href="https://discord.gg/wvteEF3" target="_blank" data-toggle="tooltip" title="Discord">  <FAComments size={28}/>  </a>
+<a href="https://discord.gg/vQgYGJz" target="_blank" data-toggle="tooltip" title="Discord">  <FAComments size={28}/>  </a>
 <a href="https://twitter.com/safecoins" target="_blank" data-toggle="tooltip" title="Twitter">  <FATwitter size={28}/>  </a>
 <a href="https://www.reddit.com/r/SafeCoins/" target="_blank" data-toggle="tooltip" title="Reddit">  <FARedditAlien size={28}/>  </a>
 <a href="https://bitcointalk.org/index.php?topic=2838370" target="_blank" data-toggle="tooltip" title="Bitcoin Talk">  <FABitcoin size={28}/>  </a>
